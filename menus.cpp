@@ -12,7 +12,8 @@ class sub_menu{ // Menu to show chapters of each subject
         **/
         class problems_menu{ // Class to hold problems database from chapters
             public:
-                void physics();
+                void physics(int chapter); // with chapter number arguement
+                
                 /** Upcoming problems_menu
                   * void maths();
                   * void chemistry();
@@ -31,24 +32,27 @@ void sub_menu::sub_menu_physics() // Function inside a class
     switch(op)
     {
         case 1:
-            pb.physics();
+            pb.physics(1);
             break;
         default:
             cout << " Invalid Option Please Try Again " << endl;
     }
 }
 
-void sub_menu::problems_menu::physics() // Initializing function inside a subclass
+void sub_menu::problems_menu::physics( int chapter) // Initializing function inside a subclass
 {
-    int o;
-    cout << " 1. Find Q " << endl;
-    cout << " 2. Find Force Between 2 charges " << endl;
-    cout << " Enter a Option : ";
-    cin >> o;
-    if(o == 1)
-        q(); // calling function inside the headerfile
-    else if(o == 2)
-        f();
-    else
-         cout << " Invalid Option " << endl;
+    if(chapter == 1)
+    {
+        int o;
+        cout << " 1. Find Q " << endl;
+        cout << " 2. Find Force Between 2 charges " << endl;
+        cout << " Enter a Option : ";
+        cin >> o;
+        if(o == 1)
+            q(); // calling function inside the headerfile
+        else if(o == 2)
+            f();
+        else
+            cout << " Invalid Option " << endl;
+    }
 }

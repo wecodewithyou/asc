@@ -23,8 +23,10 @@ void f() 	// Coulomb's Law
 	double k = 9e9;	 // coulomb's law constant [ k = 1/4*3.14*e0 ]
 	double q1,q2,r,force; 	//q1,q2 : charges , r : distance b/w charges
 	
-	cout << " Enter charges : ";
-	cin >> q1 >> q2;
+	cout << " Enter first charge : ";
+	cin >> q1;
+	cout << " Enter second charge : ";
+	cin >> q2;
 	cout <<" Enter the distance : ";
 	cin >> r;
 	

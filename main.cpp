@@ -10,9 +10,6 @@ void main_menu(); // The Main menu , Shows Subjects Option
 int main()
 {
     main_menu();
-    #ifdef _WIN64
-        system("pause");
-    #endif
     return 0;
 }
 
