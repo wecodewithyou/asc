@@ -5,13 +5,14 @@
 using namespace std;
 
 void main_menu(); // The Main menu , Shows Subjects Option
-string getOsName(); // Return the operating system Name
+
 
 int main()
 {
     main_menu();
-    if(getOsName() == "Windows32" || getOsName() == "Windows64")
-        system("pause"); 
+    #ifdef _WIN64
+        system("pause");
+    #endif
     return 0;
 }
 
@@ -32,21 +33,4 @@ void main_menu()
     } 
 }
 
-string getOsName()
-{
-    #ifdef _WIN32
-    return "Windows32";
-    #elif _WIN64
-    return "Windows64";
-    #elif __APPLE__ || __MACH__
-    return "Mac OSX";
-    #elif __linux__
-    return "Linux";
-    #elif __FreeBSD__
-    return "FreeBSD";
-    #elif __unix || __unix__
-    return "Unix";
-    #else
-    return "Other";
-    #endif
-}
+
