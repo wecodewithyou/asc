@@ -1,32 +1,17 @@
-#include "physics.h"
+#include "menus.cpp"
 #include <iostream>
+#include <string>
+
 using namespace std;
 
-class sub_menu{ // Menu to show chapters of each subject
-    public:
-        void sub_menu_physics();
-        /** Upcoming sub_menus
-          * void sub_menu_maths();
-          * void sub_menu_physics();
-          * void sub_menu_csc();
-        **/
-        class problems_menu{ // Class to hold problems database from chapters
-            public:
-                void physics();
-                /** Upcoming problems_menu
-                  * void maths();
-                  * void chemistry();
-                  * void csc();
-                **/
-        };
-};
-
 void main_menu(); // The Main menu , Shows Subjects Option
+string getOsName(); // Return the operating system Name
 
 int main()
 {
     main_menu();
-    system("pause"); 
+    if(getOsName() == "Windows32" || getOsName() == "Windows64")
+        system("pause"); 
     return 0;
 }
 
@@ -47,34 +32,21 @@ void main_menu()
     } 
 }
 
-void sub_menu::sub_menu_physics() // Function inside a class
+string getOsName()
 {
-    sub_menu::problems_menu pb; // Intializing variable to the subclass
-    int op;
-    cout << " 1. Chapter 1 " << endl;
-    cout << " Enter a Option : ";
-    cin >> op;
-    switch(op)
-    {
-        case 1:
-            pb.physics();
-            break;
-        default:
-            cout << " Invalid Option Please Try Again " << endl;
-    }
-}
-
-void sub_menu::problems_menu::physics() // Initializing function inside a subclass
-{
-    int o;
-    cout << " 1. Find Q " << endl;
-    cout << " 2. Find Force Between 2 charges " << endl;
-    cout << " Enter a Option : ";
-    cin >> o;
-    if(o == 1)
-        q(); // calling function inside the headerfile
-    else if(o == 2)
-        f();
-    else
-         cout << " Invalid Option " << endl;
+    #ifdef _WIN32
+    return "Windows32";
+    #elif _WIN64
+    return "Windows64";
+    #elif __APPLE__ || __MACH__
+    return "Mac OSX";
+    #elif __linux__
+    return "Linux";
+    #elif __FreeBSD__
+    return "FreeBSD";
+    #elif __unix || __unix__
+    return "Unix";
+    #else
+    return "Other";
+    #endif
 }
