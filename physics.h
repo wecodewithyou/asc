@@ -8,6 +8,7 @@ using namespace std;
 void q()  	//Quantization 	
 {
 	double e = 1.6e-19,q,n;  	// e is the charge of Proton or electrons
+	cout << "\t\t\t Quantiztion \t\t\t\n";
 	cout << " Enter no.of particles : ";
 	cin >> n;		//No.of Protons or Electrons
 	
@@ -22,6 +23,7 @@ int f() 	// Coulomb's Law
 	double k = 9e9;	 // coulomb's law constant [ k = 1/4*pi*e0 ]
 	double q1,q2,r,force; 	//q1,q2 : charges , r : distance b/w charges
 	
+	cout << "\t\t\t Force \t\t\t\n";
 	cout << " Enter first charge : ";
 	cin >> q1;
 	cout << " Enter second charge : ";
@@ -41,6 +43,7 @@ int E()  	//Electric Field
 	double electric_field,force,q;  	// choice is to determine Unknown force
 	char choice;
 	
+	cout << "\t\t\t Electric Field \t\t\t\n";
 	cout << " Do you know the value of force (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -73,6 +76,7 @@ int Eflux()  	//Electric Flux
 	double electric_flux,electric_field,area,angle ; 
 	char choice;
 	
+	cout << "\t\t\t Electric Flux \t\t\t\n";
 	cout << " Do you know the value of Electric Field (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -106,6 +110,7 @@ int Edipole()
 {
 	double electric_dipole,q,a; 		// a is distance (represented as 2a)
 	
+	cout << "\t\t\t Electric Dipole \t\t\t\n";
 	cout << " Enter Value of Charge : ";
 	cin >> q;
 	cout << " Enter the Distance (2a) : ";
@@ -122,6 +127,7 @@ void torque()
 	double torq,electric_dipole,electric_field,angle ;
 	char choice1,choice2 ;
 	
+	cout << "\t\t\t Torque \t\t\t\n";
 	cout << " Do you know the value of Electric Field (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong) for electric field
 	cin >> choice1 ; 
