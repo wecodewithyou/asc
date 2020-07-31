@@ -1,3 +1,5 @@
 # project_X
 
-A Simple Project by _Anon0ps_ , _phoenix_ , _Mr_Unkn0wn_
+All in One Science subjects problem solver for +2 students , Currently supports Physics problems
+
+Project by _Spectr3_ , _ph0en1x_ , _Mr.Unkn0wn_
