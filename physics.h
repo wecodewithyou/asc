@@ -13,7 +13,7 @@ void q()  	//Quantization
 	cin >> n;		//No.of Protons or Electrons
 	
 	q = n*e;	//Quantization Of Charge (Eqn)
-	cout <<" Charge : "<< q << endl; 	//charge on a body
+	cout <<" Charge = "<< q << endl; 	//charge on a body
 	
 }
 
@@ -32,7 +32,8 @@ int f() 	// Coulomb's Law
 	cin >> r;
 	
 	force = k*q1*q2/(pow(r, 2));  	// Force b/w charges
-	
+	cout << " Force = ";
+
 	return force ;
 	
 }
@@ -65,6 +66,7 @@ int E()  	//Electric Field
 	cin >> q;  	// charge of particle
 	
 	electric_field = force/q;
+	cout << "Electric Field = "; 
 	
 	return electric_field ;
 	
@@ -101,6 +103,7 @@ int Eflux()  	//Electric Flux
 	cin >> angle ;
 	
 	electric_flux = electric_field*area*cos(angle);
+	cout << " Electric Flux = ";
 	
 	return electric_flux ;
 	
@@ -117,7 +120,8 @@ int Edipole()
 	cin >> a;
     
     electric_dipole = q*a;
-    
+    cout << " Electric Dipole = ";
+
     return electric_dipole;
     
 }
