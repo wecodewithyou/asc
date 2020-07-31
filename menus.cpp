@@ -47,7 +47,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 1. Find Q " << endl;
         cout << " 2. Find Force Between 2 charges " << endl;
         cout << " 3. Find Electric Field " << endl;
-        cout << " 4. Find Electric Force " << endl;
+        cout << " 4. Find Electric Flux " << endl;
         cout << " Enter a Option : ";
         cin >> o;
         if(o == 1)
