@@ -22,14 +22,18 @@ void main_menu()
     int op;
     sub_menu sb; // Initializing class variable , its a pointer variable
     cout << " 1. Physics " << endl;
+    cout << " 2. Chemistry " << endl;
     cout << " 4. About the Program " << endl;
-    cout << " 5. Exit the Program " << endl;
+    cout << " 0. Exit the Program " << endl;
     cout << " Enter a Option : ";
     cin >> op;
     switch(op)
     {
         case 1:
             sb.sub_menu_physics(); // calling function inside the class
+            break;
+        case 2:
+            sb.sub_menu_chemistry();
             break;
         case 4:
             cout << "\n\t\t\t\t\t ABOUT THE PROGRAM \n\n";
@@ -39,7 +43,7 @@ void main_menu()
             cout << "               Developed by Spectr3 , Ph0en1x and Mr.Unkn0wn " << endl;
             cout << "\n Thank You For using our program <3 <3 <3 \n\n" << endl;
             break;
-        case 5:
+        case 0:
             cout << "\n Closing Program ...... " << endl;
             exit(0);
             break;
