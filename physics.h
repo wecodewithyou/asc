@@ -67,5 +67,37 @@ void Eflux()  	//Electric Flux
 	
 }
 
+void Edipole()
+
+{
+	double electric_dipole,q,a; 		// a is distance (represented as 2a)
+	
+	cout << " Enter Value of Charge : ";
+	cin >> q;
+	cout << " Enter the Distance (2a) : ";
+	cin >> a;
+    
+    electric_dipole = q*a;
+    cout << " Electric Dipole = " << electric_dipole << endl;
+    
+}
+
+void torque()
+
+{
+	double torq,electric_dipole,electric_field,angle ;
+	
+	cout << " Enter the Electric Field : " ;
+	cin >> electric_field ;
+	cout << " Enter the Electric Dipole : " ;
+	cin >> electric_dipole ;
+	cout << " Enter Angle b/w Electric Dipole & Electric Field ( In radian ) : " ;
+	cin >> angle ;
+	
+	torq = electric_dipole * electric_field *sin(angle) ;
+	cout << " Torque = " << torq << endl ;
+	
+}
+
 
 	
