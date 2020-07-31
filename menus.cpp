@@ -46,12 +46,18 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         int o;
         cout << " 1. Find Q " << endl;
         cout << " 2. Find Force Between 2 charges " << endl;
+        cout << " 3. Find Electric Field " << endl;
+        cout << " 4. Find Electric Force " << endl;
         cout << " Enter a Option : ";
         cin >> o;
         if(o == 1)
             q(); // calling function inside the headerfile
         else if(o == 2)
             f();
+        else if(o == 3)
+            E();
+        else if(o == 4)
+            Eflux();
         else
             cout << " Invalid Option " << endl;
     }
