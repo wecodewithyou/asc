@@ -23,7 +23,7 @@ void main_menu()
     sub_menu sb; // Initializing class variable , its a pointer variable
     cout << " 1. Physics " << endl;
     cout << " 4. About the Program " << endl;
-    cout << " 0. Exit the Program " << endl;
+    cout << " 5. Exit the Program " << endl;
     cout << " Enter a Option : ";
     cin >> op;
     switch(op)
