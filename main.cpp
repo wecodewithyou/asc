@@ -14,9 +14,6 @@ int main()
     banner();
     
     main_menu();
-    #ifdef _WIN64
-        system("pause");
-    #endif
     return 0;
 }
 
