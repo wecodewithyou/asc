@@ -35,7 +35,7 @@ void main_menu()
             cout << "\n\t\t\t\t\t ABOUT THE PROGRAM \n\n";
             cout << " Build   : Pre-Alpha Build "  << endl;
             cout << " Version : v0.1 pre-alpha build " << endl;
-            cout << "\n Description : A simple all in one science subject problem solver for +2 Studenst " << endl;
+            cout << "\n Description : A simple all in one science subject"<<endl<<" problem solver for +2 Students " << endl;
             cout << "               Developed by Spectr3 , Ph0en1x and Mr.Unkn0wn " << endl;
             cout << "\n Thank You For using our program <3 <3 <3 \n\n" << endl;
             break;
