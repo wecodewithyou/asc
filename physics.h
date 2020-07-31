@@ -8,7 +8,7 @@ using namespace std;
 void q()  	//Quantization 	
 {
 	double e = 1.6e-19,q,n;  	// e is the charge of Proton or electrons
-	cout << "\t\t\t Quantiztion \t\t\t\n";
+	cout << "\t\t\t Quantization \t\t\t\n";
 	cout << " Enter no.of particles : ";
 	cin >> n;		//No.of Protons or Electrons
 	
