@@ -1,14 +1,18 @@
 #include "menus.cpp"
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
 void main_menu(); // The Main menu , Shows Subjects Option
 
+void banner(); //the prototype of banner
 
 int main()
 {
+    banner();
+    
     main_menu();
     #ifdef _WIN64
         system("pause");
@@ -34,3 +38,16 @@ void main_menu()
 }
 
 
+void banner()
+
+{
+    string str;
+    fstream file("sangit.txt",ios::in);
+    while(getline(file,str))
+    {
+        cout<< str << endl;
+
+    }
+    file.close();
+
+}
