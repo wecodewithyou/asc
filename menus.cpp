@@ -65,21 +65,21 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " Enter a Option : ";
         cin >> o;
         if(o == 1)
-            q(); // calling function inside the headerfile
+            q(); // Quantization
         else if(o == 2)
-            cout << f() << endl;
-        else if(o == 3)
-            cout << E() << endl;
+            cout << f() << endl; // Force
+        else if(o == 3) 
+            cout << E() << endl; // Electric Field
         else if(o == 4)
-            cout << Eflux() << endl;
+            cout << Eflux() << endl; // Electric Flux
         else if(o == 5)
-            cout << Edipole() << endl;
+            cout << Edipole() << endl; // Electric Dipole
         else if(o == 6)
-            torque();
+            torque(); // Torque
         else if(o == 7)
-            EofDipole_al();
+            EofDipole_al(); // Electric Field of Electric Dipole at Axiel Line
         else if(o == 8)
-            EofDipole_el();
+            EofDipole_el(); // Electric Field of Electric Dipole at Equatorial Line
         else
             cout << " Invalid Option " << endl;
     }
@@ -90,11 +90,11 @@ void sub_menu::problems_menu::chemistry(int chapter)
     if(chapter == 1)
     {
         int o;
-        cout << " 1. Density of the unit Cell " << endl;
+        cout << " 1. Density of the unit cell " << endl;
         cout << " Enter a Option : ";
         cin >> o;
         if(o == 1)
-            cout << density() << endl;
+            cout << density() << endl; // Density of the unit cell
         else
             cout << " Invalid Option " << endl;
     }
