@@ -40,7 +40,7 @@ void main_menu()
             cout << " Build   : Pre-Alpha Build "  << endl;
             cout << " Version : v0.1 pre-alpha build " << endl;
             cout << "\n Description : A simple all in one science subject"<<endl<<" problem solver for +2 Students " << endl;
-            cout << "               Developed by Spectr3 , Ph0en1x and Mr.Unkn0wn " << endl;
+            cout << "               Developed by Mr.Unkn0wn, Ph0en1x and Sp3ctr3 " << endl;
             cout << "\n Thank You For using our program <3 <3 <3 \n\n" << endl;
             break;
         case 0:
