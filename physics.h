@@ -174,4 +174,72 @@ void torque()
 	cout << " Torque = " << torq << endl ;
 }
 
+void EofDipole_al() 		// Electric Field OF An Electric Dipole At Axial Line (al)
+
+{
+	double electric_field,k = 9e9,electric_dipole,r ;  	//r is distance
+	char choice;
+	
+	cout << "\t\t\t Electric Field OF An Electric Dipole (At Axial Line) \t\t\t\n";
+	cout << " Do you know the value of Electric Dipole (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+	if ( choice == 'n' || choice == 'N' )
+	{
+		electric_dipole = Edipole();
+	}
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Electric Dipole : " ;
+		cin >> electric_dipole ;
+
+	}
+	else 
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+	cout << " Enter the Distance (r) : " ;
+	cin >> r;
+	
+	electric_field = k*2*electric_dipole/(pow(r,3));
+	cout << " Electric Field = " << electric_field << endl ;
+	
+} 
+
+void EofDipole_el() 		// Electric Field OF An Electric Dipole At Equatorial Line (el)
+
+{
+	double electric_field,k = 9e9,electric_dipole,r ;  	//r is distance
+	char choice;
+	
+	cout << "\t\t\t Electric Field OF An Electric Dipole (At Equatorial Line) \t\t\t\n";
+	cout << " Do you know the value of Electric Dipole (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+	if ( choice == 'n' || choice == 'N' )
+	{
+		electric_dipole = Edipole();
+	}
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Electric Dipole : " ;
+		cin >> electric_dipole ;
+
+	}
+	else 
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+	cout << " Enter the Distance (r) : " ;
+	cin >> r;
+	
+	electric_field = (-1) *k*electric_dipole/(pow(r,3)); 	/* (-1) Indicate Electric Field is 
+																Opposite to Electric Dipole */
+	cout << " Electric Field = " << electric_field << endl ;
+	
+} 
+	
+
 #endif
