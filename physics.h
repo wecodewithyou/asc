@@ -2,12 +2,17 @@
 #define __PHYSICS_H_INCLUDED__
 
 #include<iostream>
-#include<math.h>
+#include<cmath>
 using namespace std;
+
+// Constants
+
+const double e = 1.6e-19; 	// e is the charge of Proton or electrons
+const double k = 9e9;  // coulomb's law constant [ k = 1/4*pi*e0 ]
 
 void q()  	//Quantization 	
 {
-	double e = 1.6e-19,q,n;  	// e is the charge of Proton or electrons
+	double q,n;  
 	cout << "\t\t\t Quantization \t\t\t\n";
 	cout << " Enter no.of particles : ";
 	cin >> n;		//No.of Protons or Electrons
@@ -20,7 +25,6 @@ void q()  	//Quantization
 
 int f() 	// Coulomb's Law
 {
-	double k = 9e9;	 // coulomb's law constant [ k = 1/4*pi*e0 ]
 	double q1,q2,r,force; 	//q1,q2 : charges , r : distance b/w charges
 	
 	cout << "\t\t\t Force \t\t\t\n";
@@ -177,7 +181,7 @@ void torque()
 void EofDipole_al() 		// Electric Field OF An Electric Dipole At Axial Line (al)
 
 {
-	double electric_field,k = 9e9,electric_dipole,r ;  	//r is distance
+	double electric_field,electric_dipole,r ;  	//r is distance
 	char choice;
 	
 	cout << "\t\t\t Electric Field OF An Electric Dipole (At Axial Line) \t\t\t\n";
@@ -210,7 +214,7 @@ void EofDipole_al() 		// Electric Field OF An Electric Dipole At Axial Line (al)
 void EofDipole_el() 		// Electric Field OF An Electric Dipole At Equatorial Line (el)
 
 {
-	double electric_field,k = 9e9,electric_dipole,r ;  	//r is distance
+	double electric_field,electric_dipole,r ;  	//r is distance
 	char choice;
 	
 	cout << "\t\t\t Electric Field OF An Electric Dipole (At Equatorial Line) \t\t\t\n";
