@@ -7,18 +7,11 @@ class sub_menu{ // Menu to show chapters of each subject
     public:
         void sub_menu_physics();
         void sub_menu_chemistry();
-        /** Upcoming sub_menus
-          * void sub_menu_maths();
-          * void sub_menu_csc();
-        **/
+
         class problems_menu{ // Class to hold problems database from chapters
             public:
                 void physics(int chapter); // with chapter number arguement
                 void chemistry(int chapter);
-                /** Upcoming problems_menu
-                  * void maths();
-                  * void csc();
-                **/
         };
 };
 
@@ -67,6 +60,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 4. Find Electric Flux " << endl;
         cout << " 5. Find Electric Dipole " << endl;
         cout << " 6. Find Torque " << endl;
+        cout << " 7. EField of EDipole at Axiel Line " << endl;
+        cout << " 8. EField of EDipole at Equatorial Line " << endl;
         cout << " Enter a Option : ";
         cin >> o;
         if(o == 1)
@@ -81,6 +76,10 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             cout << Edipole() << endl;
         else if(o == 6)
             torque();
+        else if(o == 7)
+            EofDipole_al();
+        else if(o == 8)
+            EofDipole_el();
         else
             cout << " Invalid Option " << endl;
     }
