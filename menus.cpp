@@ -118,13 +118,13 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 	else if(o == 1)
             q(); // Quantization
         else if(o == 2)
-            cout << f() << endl; // Force
+            cout << f() << " N" << endl; // Force
         else if(o == 3) 
-            cout << E() << endl; // Electric Field
+            cout << E() << " N/C" << endl; // Electric Field
         else if(o == 4)
-            cout << Eflux() << endl; // Electric Flux
+            cout << Eflux() << " Nm2/c" << endl; // Electric Flux
         else if(o == 5)
-            cout << Edipole() << endl; // Electric Dipole
+            cout << Edipole() << " Cm" << endl; // Electric Dipole
         else if(o == 6)
             torque(); // Torque
         else if(o == 7)
