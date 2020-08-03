@@ -18,7 +18,7 @@ void q()  	//Quantization
 	cin >> n;		//No.of Protons or Electrons
 	
 	q = n*e;	//Quantization Of Charge (Eqn)
-	cout <<" Charge = "<< q << endl; 	//charge on a body
+	cout <<" Charge = "<< q << " C" << endl; 	//charge on a body
 	
 }
 
@@ -36,7 +36,7 @@ int f() 	// Coulomb's Law
 	cin >> r;
 	
 	force = k*q1*q2/(pow(r, 2));  	// Force b/w charges
-	cout << " Force = ";
+	cout << " Force = " ;
 
 	return force ;
 	
@@ -70,7 +70,7 @@ int E()  	//Electric Field
 	cin >> q;  	// charge of particle
 	
 	electric_field = force/q;
-	cout << "Electric Field = "; 
+	cout << "Electric Field = " ; 
 	
 	return electric_field ;
 	
@@ -107,7 +107,7 @@ int Eflux()  	//Electric Flux
 	cin >> angle ;
 	
 	electric_flux = electric_field*area*cos(angle);
-	cout << " Electric Flux = ";
+	cout << " Electric Flux = " ;
 	
 	return electric_flux ;
 	
@@ -124,7 +124,6 @@ int Edipole()
 	cin >> a;
     
     electric_dipole = q*a;
-    cout << " Electric Dipole = ";
 
     return electric_dipole;
     
@@ -175,13 +174,13 @@ void torque()
 	cin >> angle ;
 	
 	torq = electric_dipole * electric_field *sin(angle) ;
-	cout << " Torque = " << torq << endl ;
+	cout << " Torque = " << torq << " N/m" << endl ;
 }
 
 void EofDipole_al() 		// Electric Field OF An Electric Dipole At Axial Line (al)
 
 {
-	double electric_field,electric_dipole,r ;  	//r is distance
+	double electric_field,electric_dipole,r,a ;  	//r is distance , a is distance b/w charges
 	char choice;
 	
 	cout << "\n Electric Field OF An Electric Dipole (At Axial Line):- " << endl;
@@ -205,16 +204,18 @@ void EofDipole_al() 		// Electric Field OF An Electric Dipole At Axial Line (al)
 	}
 	cout << " Enter the Distance (r) : " ;
 	cin >> r;
+	cout << " Enter the Distance b/w Charges : ";
+	cin >> a;
 	
-	electric_field = k*2*electric_dipole/(pow(r,3));
-	cout << " Electric Field = " << electric_field << endl ;
+	electric_field = k*2*r*electric_dipole/(pow(pow(r,2)-pow(a/2,2),2));
+	cout << " Electric Field = " << electric_field << " N/C" << endl ;
 	
 } 
 
 void EofDipole_el() 		// Electric Field OF An Electric Dipole At Equatorial Line (el)
 
 {
-	double electric_field,electric_dipole,r ;  	//r is distance
+	double electric_field,electric_dipole,r,a ;  	//r is distance , a is distance b/w charges
 	char choice;
 	
 	cout << "\n Electric Field OF An Electric Dipole (At Equatorial Line):- " << endl;
@@ -238,9 +239,12 @@ void EofDipole_el() 		// Electric Field OF An Electric Dipole At Equatorial Line
 	}
 	cout << " Enter the Distance (r) : " ;
 	cin >> r;
+	cout << " Enter the Distance b/w Charges : ";
+	cin >> a;
 	
-	electric_field = (-1) *k*electric_dipole/(pow(r,3)); 	/* (-1) Indicate Electric Field is 											   Opposite to Electric Dipole */
-	cout << " Electric Field = " << electric_field << endl ;
+	electric_field = (-1) *k*electric_dipole/(pow(pow(r,2)-pow(a/2,2),3/2)); 	/* (-1) Indicate Electric Field is
+																					Opposite to Electric Dipole */
+	cout << " Electric Field = " << electric_field << " N/C" << endl ;
 	
 } 
 	
