@@ -5,6 +5,6 @@
 |_|     |_| \_\  \___/   \___/  |_____|  \____|   |_|           /_/\_\
                                                                       
                                                                
-                          GITHUB:https://www.github.com/wecodewithyou
-			  CONTACT INFO:wecodewithyou2020@protonmail.com
-			  DEVS:Mr.Unkn0wn,Ph0en1x,Sp3ctr3
+                GITHUB:https://www.github.com/wecodewithyou
+		CONTACT INFO:wecodewithyou2020@protonmail.com
+		DEVS:Mr.Unkn0wn,Ph0en1x,Sp3ctr3
