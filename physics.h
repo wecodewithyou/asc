@@ -9,6 +9,7 @@ using namespace std;
 
 const double e = 1.6e-19; 	// e is the charge of Proton or electrons
 const double k = 9e9;  // coulomb's law constant [ k = 1/4*pi*e0 ]
+const double e0 = 8.854e-12 	// Electric Permitivity in free space
 
 void q()  	//Quantization 	
 {
@@ -247,6 +248,79 @@ void EofDipole_el() 		// Electric Field OF An Electric Dipole At Equatorial Line
 	cout << " Electric Field = " << electric_field << " N/C" << endl ;
 	
 } 
+
+void Eflux_Glaw() 	// Electric Flux using Gauss's Law
+
+{
+	double electric_flux,q; 		// a is distance (represented as 2a)
+	
+	cout << "\n Electric Flux :- " << endl;
+	cout << " Enter Value of Charge : ";
+	cin >> q;
+	
+    electric_flux = q/e0 ;
+    cout << " Electric Flux = " << electric_flux << " Nm2/C" << endl ;
+    
+ }
+ 
+ void Ldensity()  	// Linear Charge Density
+ 
+ {
+	double linear_density,q,length ; 		
+	
+	cout << "\n Linear Charge Density :- " << endl;
+	cout << " Enter Value of Charge : ";
+	cin >> q;
+	
+    linear_density = q/length ;
+    cout << " Linear Charge Density = " << linear_density << " C/m" << endl ;
+    
+ } 
+ 
+ void Sdensity() 	// Surface Charge Density
+ 
+ {
+	double surface_density,q,surface_area ; 		
+	
+	cout << "\n Surface Charge Density :- " << endl;
+	cout << " Enter Value of Charge : ";
+	cin >> q;
+	
+    surface_density = q/surface_area ;
+    cout << " Surface Charge Density = " << surface_density << " C/m2" << endl ;
+    
+ }
+ 
+ 
+ void Efield_inflong_w()  	// Electric Field due to an infinitely long straight uniformly charged wire
+ 
+ {
+	 double electric_field, linear_density, distance ;
+	 
+	cout << "\n Electric Field :- " << endl;
+	cout << " Do you know the value of Linear Charge Density (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+	if ( choice == 'n' || choice == 'N' )
+	{
+		linear_density = Ldensity();
+	}
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Linear Charge Density : ";
+		cin >> linear_density ;
+	
+	}
+	else 
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+	
+    electric_field = k * 2*linear_density/distance ;
+    cout << " Electric Field = " << electric_field << " N/C" << endl ;
+ 
+ } 
 	
 
 #endif
