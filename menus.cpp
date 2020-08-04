@@ -1,17 +1,21 @@
 #include <iostream>
 #include "physics.h"
 #include "chemistry.h"
+#include "csc.h"
+
 using namespace std;
 
 class sub_menu{ // Menu to show chapters of each subject
     public:
         void sub_menu_physics();
         void sub_menu_chemistry();
+        void sub_menu_csc();
 
         class problems_menu{ // Class to hold problems database from chapters
             public:
                 void physics(int chapter); // with chapter number arguement
                 void chemistry(int chapter);
+                void csc(int chapter);
         };
 };
 
@@ -24,6 +28,7 @@ void main_menu()
     cout << "\n MAIN MENU:- " << endl;
     cout << " 1. Physics " << endl;
     cout << " 2. Chemistry " << endl;
+    cout << " 3. Computer Science " << endl;
     cout << " 4. About the Program " << endl;
     cout << " 0. Exit the Program " << endl;
     cout << " Enter a Option : ";
@@ -35,6 +40,9 @@ void main_menu()
             break;
         case 2:
             sb.sub_menu_chemistry();
+            break;
+        case 3:
+            sb.sub_menu_csc();
             break;
         case 4:
             cout << "\n\t\t\t\t\t ABOUT THE PROGRAM \n\n";
@@ -95,6 +103,27 @@ void sub_menu::sub_menu_chemistry()
             cout << " Invalid Option Please Try Again " << endl;
     }
 }
+
+void sub_menu::sub_menu_csc()
+{
+  cout << "\n CHAPTER MENU:- " << endl;
+  int o;
+  cout << " 1. Structures and Pointers " << endl;
+  cout << " 0. Back to Main Menu " << endl;
+  cout << " Enter the option : ";
+  cin >> o;
+  switch(o)
+  {
+    case 0:
+          main_menu();
+    case 1:
+          pb.csc(1);
+          break;
+    default:
+          cout << "\n Invalid Option Please Try Again " << endl;
+  }
+}
+
 
 void sub_menu::problems_menu::physics( int chapter) // Initializing function inside a subclass
 {
@@ -165,4 +194,23 @@ void sub_menu::problems_menu::chemistry(int chapter)
         else
             cout << " Invalid Option " << endl;
     }
+}
+
+void sub_menu::problems_menu::csc(int chapter)
+{
+  cout << "\n PROBLEMS MENU:- " << endl;
+  if(chapter == 1)
+  {
+    int o;
+    cout << " 1. Make marklist of a group of students " << endl;
+    cout << " 0. Back to Chapter Menu " << endl;
+    cout << " Enter a Option : ";
+    cin >> o;
+    if(o == 0)
+        sb.sub_menu_csc();
+    else if(o == 1)
+        marklist();
+    else
+        cout << "\n Invalid Option Please Try Again " << endl;
+  }
 }
