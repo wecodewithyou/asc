@@ -20,7 +20,7 @@ sub_menu::problems_menu pb; // Intializing variable to the subclass
 
 void main_menu()
 {
-    int op; 
+    int op;
     cout << "\n MAIN MENU:- " << endl;
     cout << " 1. Physics " << endl;
     cout << " 2. Chemistry " << endl;
@@ -51,7 +51,7 @@ void main_menu()
         default:
             cout << " Invalid Option Please Try Again " << endl;
             exit(1);
-    } 
+    }
 }
 
 void sub_menu::sub_menu_physics() // Function inside a class
@@ -92,7 +92,7 @@ void sub_menu::sub_menu_chemistry()
             pb.chemistry(1);
             break;
         default:
-            cout << " Invalid Option Please Try Again " << endl; 
+            cout << " Invalid Option Please Try Again " << endl;
     }
 }
 
@@ -110,6 +110,10 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 6. Find Torque " << endl;
         cout << " 7. EField of EDipole at Axiel Line " << endl;
         cout << " 8. EField of EDipole at Equatorial Line " << endl;
+        cout << " 9. Electric Flex using Guass's Law " << endl;
+        cout << " 10. Linear Charge Density " << endl;
+        cout << " 11. Surface Charge Density " << endl;
+        cout << " 12. EField due to a long straight uniformly charged wire " << endl;
         cout << " 0. Back to Chapter Menu " << endl;
 	cout << " Enter a Option : ";
         cin >> o;
@@ -119,7 +123,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             q(); // Quantization
         else if(o == 2)
             cout << f() << " N" << endl; // Force
-        else if(o == 3) 
+        else if(o == 3)
             cout << E() << " N/C" << endl; // Electric Field
         else if(o == 4)
             cout << Eflux() << " Nm2/c" << endl; // Electric Flux
@@ -131,6 +135,14 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             EofDipole_al(); // Electric Field of Electric Dipole at Axiel Line
         else if(o == 8)
             EofDipole_el(); // Electric Field of Electric Dipole at Equatorial Line
+        else if(o == 9)
+            Eflux_Glaw();
+        else if(o == 10)
+            cout << Ldensity() << "C" << endl;
+        else if(o == 11)
+            Sdensity();
+        else if(o == 12)
+            Efield_inflong_w();
         else
             cout << " Invalid Option " << endl;
     }
