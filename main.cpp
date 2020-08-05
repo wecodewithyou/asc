@@ -9,8 +9,10 @@ void banner(); //the prototype of banner
 
 int main()
 {
+    cout << "\033[1;36m"; // cyan color
     banner();
     main_menu();
+    cout << "\033[0m"; // normal color , white on black
     return 0;
 }
 
