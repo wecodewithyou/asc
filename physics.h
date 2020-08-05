@@ -11,6 +11,8 @@ const double e = 1.6e-19; 	// e is the charge of Proton or electrons
 const double k = 9e9;  // coulomb's law constant [ k = 1/4*pi*e0 ]
 const double e0 = 8.854e-12; 	// Electric Permitivity in free space
 
+							// Chapter 1 \\
+
 void q()  	//Quantization
 {
 	double q,n;
@@ -24,7 +26,7 @@ void q()  	//Quantization
 }
 
 
-int f() 	// Coulomb's Law
+double f() 	// Coulomb's Law
 {
 	double q1,q2,r,force; 	//q1,q2 : charges , r : distance b/w charges
 
@@ -44,7 +46,7 @@ int f() 	// Coulomb's Law
 }
 
 
-int E()  	//Electric Field
+double E()  	//Electric Field
 {
 	double electric_field,force,q;  	// choice is to determine Unknown force
 	char choice;
@@ -78,7 +80,7 @@ int E()  	//Electric Field
 }
 
 
-int Eflux()  	//Electric Flux
+double Eflux()  	//Electric Flux
 {
 	double electric_flux,electric_field,area,angle ;
 	char choice;
@@ -114,7 +116,7 @@ int Eflux()  	//Electric Flux
 
 }
 
-int Edipole()
+double Edipole()
 {
 	double electric_dipole,q,a; 		// a is distance (represented as 2a)
 
@@ -125,6 +127,7 @@ int Edipole()
 	cin >> a;
 
     electric_dipole = q*a;
+    cout << " Electric Dipole = " ;
 
     return electric_dipole;
 
@@ -271,6 +274,8 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	cout << "\n Linear Charge Density :- " << endl;
 	cout << " Enter Value of Charge : ";
 	cin >> q;
+	cout << " Enter the Length : " ;
+	cin >> length ;
 
     linear_density = q/length ;
     cout << " Linear Charge Density = ";
@@ -278,7 +283,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 
  }
 
- void Sdensity() 	// Surface Charge Density
+ double Sdensity() 	// Surface Charge Density
 
  {
 	double surface_density,q,surface_area ;
@@ -286,9 +291,13 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	cout << "\n Surface Charge Density :- " << endl;
 	cout << " Enter Value of Charge : ";
 	cin >> q;
+	cout << " Enter the surface Area : " ;
+	cin >> surface_area ;
 
     surface_density = q/surface_area ;
-    cout << " Surface Charge Density = " << surface_density << " C/m2" << endl ;
+    cout << " Surface Charge Density = " ;
+    
+    return surface_density ;
 
  }
 
@@ -319,11 +328,138 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 		cout<< " Wrong Input \n > " << choice << endl;
 		goto x;
 	}
+	cout << " Enter the Distance : " ;
+	cin >> distance ;
 
     electric_field = k * 2*linear_density/distance ;
     cout << " Electric Field = " << electric_field << " N/C" << endl ;
 
  }
 
+ void Efield_infplane_s()  	// Electric Field due to an uniformly charged infinite plane sheet
 
+ {
+
+	double electric_field, surface_density ;
+	char choice;
+
+	cout << "\n Electric Field :- " << endl;
+	cout << " Do you know the value of Surface Charge Density (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+	if ( choice == 'n' || choice == 'N' )
+	{
+		surface_density = Sdensity();
+	}
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Surface Charge Density : ";
+		cin >> surface_density ;
+
+	}
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl;
+		goto x;
+	}
+
+    electric_field = surface_density/ 2*e0 ;
+    cout << " Electric Field = " << electric_field << " N/C" << endl ;
+
+ }
+
+void Efield_infplane_st()  	/* Electric Field due to an uniformly charged 
+								infinite plane sheet with finite thickness */
+
+ {
+
+	double electric_field, surface_density ;
+	char choice;
+
+	cout << "\n Electric Field :- " << endl;
+	cout << " Do you know the value of Surface Charge Density (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+	if ( choice == 'n' || choice == 'N' )
+	{
+		surface_density = Sdensity();
+	}
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Surface Charge Density : ";
+		cin >> surface_density ;
+
+	}
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl;
+		goto x;
+	}
+
+    electric_field = surface_density/ e0 ;
+    cout << " Electric Field = " << electric_field << " N/C" << endl ;
+
+ }
+
+void Efield_s_shell()  	// Electric Field due to an uniformly charged thin spherical shell 
+								
+{
+	
+	double electric_field, surface_density, R , r ;
+	char choice;
+
+	cout << "\n Electric Field :- " << endl;
+	cout << " Enter the Radius of Shell : " ;
+	cin >> R; 	//  R is the Radius of Shell 
+	cout << " Enter the Distance From Cetre of Shell : " ;
+	cin >> r;	//  r is the Distance From Cetre of Shell
+	
+	if ( r < R )
+	{
+		electric_field = 0 ;
+		cout << " Electric Field = " << electric_field << endl ;
+		exit(0) ;
+	}
+		cout << " Do you know the value of Surface Charge Density (y/n) \n > " ;
+		x:  	// x is to repeatly type answer (if wrong)
+		cin >> choice ;
+		
+		if ( choice == 'n' || choice == 'N' )
+		{
+			surface_density = Sdensity();
+		}
+		
+		else if ( choice == 'y' || choice == 'Y' )
+		{
+			cout << " Enter the Surface Charge Density : ";
+			cin >> surface_density ;
+
+		}
+		
+		else
+		{
+			cout<< " Wrong Input \n > " << choice << endl;
+			goto x;
+		}
+
+	if ( r > R )
+	{
+		electric_field = surface_density *pow(R,2)/(e0*pow(r,2)) ;
+		cout << " Electric Field = " << electric_field << endl ;
+		exit(0);
+	}
+	
+	if ( r == R )
+	{
+		electric_field = surface_density/e0 ;
+		cout << " Electric Field = " << electric_field << endl ;
+	}
+	
+}
+
+					// Chapter 1 Finished \\
+					
+						// Chapter 2 \\
+				
+				
 #endif
