@@ -9,13 +9,13 @@
 using namespace std;
 
 void banner(); //the prototype of banner
-void show_progress_bar(std::ostream& os, int time, std::string message, char symbol); // progress bar
+void show_progress_bar(std::ostream& os, int time, std::string message, wchar_t symbol); // progress bar
 
 int main()
 {
     cout << "\033[1;36m"; // cyan color
     banner();
-    show_progress_bar(std::clog, 100, "Loading", '#');
+    show_progress_bar(std::clog, 100, "Loading", 1060);
     cout << "completed!!" << endl;
     main_menu();
     cout << "\033[0m"; // normal color , white on black
@@ -35,7 +35,7 @@ void banner()
     file.close();
 }
 
-void show_progress_bar(std::ostream& os, int time, std::string message, char symbol = '*')
+void show_progress_bar(std::ostream& os, int time, std::string message, wchar_t symbol)
 {
     static const auto bar_length = 60;
     // not including the percentage figure and spaces
