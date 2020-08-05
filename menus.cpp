@@ -22,16 +22,16 @@ class sub_menu{ // Menu to show chapters of each subject
 sub_menu sb;
 sub_menu::problems_menu pb; // Intializing variable to the subclass
 
-const string alert = "\033[1;31m";
-const string success = "\033[;32m";
-const string info = "\033[34m";
-const string orange = "\033[33m";
+const string alert = "\033[1;31m"; // red color
+const string success = "\033[;32m"; // green color
+const string info = "\033[34m"; // blue color
+const string yellow = "\033[33m";
 const string clear_color = "\033[0m";
 
 void main_menu()
 {
     int op;
-    cout << orange << "\n MAIN MENU:- " << endl;
+    cout << yellow << "\n MAIN MENU:- " << endl;
     cout << " 1. Physics " << endl;
     cout << " 2. Chemistry " << endl;
     cout << " 3. Computer Science " << endl;
@@ -73,7 +73,7 @@ void sub_menu::sub_menu_physics() // Function inside a class
     cout << "\n CHAPTER MENU:- " << endl;
     cout << info << " Note :- While inputing values like 1.066*10^23 , " << endl;
     cout << "\t Please do in this form : 1.066e23 " << endl;
-    cout << "\t If the exponent is negative , then form : 1.066e-23 . \n\n" << orange;
+    cout << "\t If the exponent is negative , then form : 1.066e-23 . \n\n" << yellow;
     cout << " 1. Electric Charges and Fields " << endl;
     cout << " 0. Back to Main Menu " << endl;
     cout << " Enter a Option : ";
