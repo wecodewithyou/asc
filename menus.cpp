@@ -167,9 +167,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 9)
             Eflux_Glaw();
         else if(o == 10)
-            cout << Ldensity() << "C" << endl;
+            cout << Ldensity() << " C/m" << endl;
         else if(o == 11)
-            Sdensity();
+            cout << Sdensity() << " C/m2" << endl ;
         else if(o == 12)
             Efield_inflong_w();
         else
