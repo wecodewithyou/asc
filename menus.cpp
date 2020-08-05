@@ -22,10 +22,16 @@ class sub_menu{ // Menu to show chapters of each subject
 sub_menu sb;
 sub_menu::problems_menu pb; // Intializing variable to the subclass
 
+const string alert = "\033[1;31m";
+const string success = "\033[;32m";
+const string info = "\033[34m";
+const string orange = "\033[33m";
+const string clear_color = "\033[0m";
+
 void main_menu()
 {
     int op;
-    cout << "\n MAIN MENU:- " << endl;
+    cout << orange << "\n MAIN MENU:- " << endl;
     cout << " 1. Physics " << endl;
     cout << " 2. Chemistry " << endl;
     cout << " 3. Computer Science " << endl;
@@ -45,20 +51,19 @@ void main_menu()
             sb.sub_menu_csc();
             break;
         case 4:
-            cout << "\n\t\t\t\t\t ABOUT THE PROGRAM \n\n";
-            cout << " Build   : Pre-Alpha Build "  << endl;
+            cout << success << "\n\t\t\t\t\t PROJECT_X \n\n";
+            cout << info << " Build   : Pre-Alpha Build "  << endl;
             cout << " Version : v0.1 pre-alpha build " << endl;
             cout << "\n Description : A simple all in one science subject"<<endl<<" problem solver for +2 Students " << endl;
             cout << "               Developed by Spectr3 , Ph0en1x and Mr.Unkn0wn " << endl;
-            cout << "\n Thank You For using our program <3 <3 <3 \n\n" << endl;
+            cout << "\n Thank You For using our program <3 <3 <3 \n\n" << clear_color << endl;
             break;
         case 0:
-            cout << "\n Closing Program ...... " << endl;
+            cout << alert << "\n Closing Program ...... " << clear_color << endl;
             exit(0);
             break;
         default:
-            cout << " Invalid Option Please Try Again " << endl;
-            exit(1);
+            cout << alert << "\n Invalid option please try again " << endl;
     }
 }
 
@@ -66,6 +71,9 @@ void sub_menu::sub_menu_physics() // Function inside a class
 {
     int op;
     cout << "\n CHAPTER MENU:- " << endl;
+    cout << info << " Note :- While inputing values like 1.066*10^23 , " << endl;
+    cout << "\t Please do in this form : 1.066e23 " << endl;
+    cout << "\t If the exponent is negative , then form : 1.066e-23 . \n\n" << orange;
     cout << " 1. Electric Charges and Fields " << endl;
     cout << " 0. Back to Main Menu " << endl;
     cout << " Enter a Option : ";
@@ -79,7 +87,7 @@ void sub_menu::sub_menu_physics() // Function inside a class
             pb.physics(1);
             break;
         default:
-            cout << " Invalid Option Please Try Again " << endl;
+            cout << alert << "\n Invalid option please try again " << endl;
     }
 }
 
@@ -100,7 +108,7 @@ void sub_menu::sub_menu_chemistry()
             pb.chemistry(1);
             break;
         default:
-            cout << " Invalid Option Please Try Again " << endl;
+            cout << alert << "\n Invalid option please try again "<< endl;
     }
 }
 
@@ -120,7 +128,7 @@ void sub_menu::sub_menu_csc()
           pb.csc(1);
           break;
     default:
-          cout << "\n Invalid Option Please Try Again " << endl;
+          cout << alert << "\n Invalid option please try again " << endl;
   }
 }
 
@@ -143,6 +151,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 10. Linear Charge Density " << endl;
         cout << " 11. Surface Charge Density " << endl;
         cout << " 12. EField due to a long straight uniformly charged wire " << endl;
+        cout << " 13. EField due to aan uniformly charged infinite plane sheet " << endl;
+        cout << " 14. \"\" with finite thickness " << endl;
+        cout << " 15. EField due to an uniformly charged thin spherical shell " << endl;
         cout << " 0. Back to Chapter Menu " << endl;
 	cout << " Enter a Option : ";
         cin >> o;
@@ -151,13 +162,13 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 	else if(o == 1)
             q(); // Quantization
         else if(o == 2)
-            cout << f() << " N" << endl; // Force
+            cout <<  success << f() << " N" << endl; // Force
         else if(o == 3)
-            cout << E() << " N/C" << endl; // Electric Field
+            cout << success << E() << " N/C" << endl; // Electric Field
         else if(o == 4)
-            cout << Eflux() << " Nm2/c" << endl; // Electric Flux
+            cout << success << Eflux() << " Nm2/c" << endl; // Electric Flux
         else if(o == 5)
-            cout << Edipole() << " Cm" << endl; // Electric Dipole
+            cout << success << Edipole() << " Cm" << endl; // Electric Dipole
         else if(o == 6)
             torque(); // Torque
         else if(o == 7)
@@ -167,13 +178,19 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 9)
             Eflux_Glaw();
         else if(o == 10)
-            cout << Ldensity() << " C/m" << endl;
+            cout << success << Ldensity() << " C/m" << endl; // Linear Density
         else if(o == 11)
-            cout << Sdensity() << " C/m2" << endl ;
+            cout << success << Sdensity() << " C/m2" << endl ; // Surface Density
         else if(o == 12)
             Efield_inflong_w();
+        else if(o == 13)
+            Efield_infplane_s();
+        else if(o == 14)
+            Efield_infplane_st();
+        else if(o == 15)
+            Efield_s_shell();
         else
-            cout << " Invalid Option " << endl;
+            cout << alert << "\n Invalid option please try again" << endl;
     }
 }
 
@@ -192,7 +209,7 @@ void sub_menu::problems_menu::chemistry(int chapter)
 	else if(o == 1)
             cout << density() << endl; // Density of the unit cell
         else
-            cout << " Invalid Option " << endl;
+            cout << alert << "\n Invalid option please try again " << endl;
     }
 }
 
@@ -211,6 +228,6 @@ void sub_menu::problems_menu::csc(int chapter)
     else if(o == 1)
         marklist();
     else
-        cout << "\n Invalid Option Please Try Again " << endl;
+        cout << alert << "\n Invalid option please try again " << endl;
   }
 }
