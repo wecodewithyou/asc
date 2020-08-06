@@ -13,18 +13,18 @@ const double e0 = 8.854e-12; 	// Electric Permitivity in free space
 
 						/*
 							// Chapter 1 \\
-					// Electric Charges and Fields \\	
+					// Electric Charges and Fields \\
 														*/
 double q()  	//Quantization
 {
 	double q,n;
-	cout << "\n Quantization:- " << endl;
+	cout << "\n Quantization :- " << endl;
 	cout << " Enter no.of particles : ";
 	cin >> n;		//No.of Protons or Electrons
 
 	q = n*e;	//Quantization Of Charge (Eqn)
 	cout <<" Charge = "<< q << " C" << endl; 	//charge on a body
-	
+
 	return q ;
 
 }
@@ -34,7 +34,7 @@ double f() 	// Coulomb's Law
 {
 	double q1,q2,r,force; 	//q1,q2 : charges , r : distance b/w charges
 
-	cout << "\n Force:- " << endl;
+	cout << "\n Force :- " << endl;
 	cout << " Enter first charge : ";
 	cin >> q1;
 	cout << " Enter second charge : ";
@@ -55,7 +55,7 @@ double E()  	//Electric Field
 	double electric_field,force,q;  	// choice is to determine Unknown force
 	char choice;
 
-	cout << "\n Electric Field:- " << endl;
+	cout << "\n Electric Field :- " << endl;
 	cout << " Do you know the value of force (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -89,7 +89,7 @@ double Eflux()  	//Electric Flux
 	double electric_flux,electric_field,area,angle ;
 	char choice;
 
-	cout << "\n Electric Flux:- " << endl;
+	cout << "\n Electric Flux :- " << endl;
 	cout << " Do you know the value of Electric Field (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -124,7 +124,7 @@ double Edipole()
 {
 	double electric_dipole,q,a; 		// a is distance (represented as 2a)
 
-	cout << "\n Electric Dipole:- " << endl;
+	cout << "\n Electric Dipole :- " << endl;
 	cout << " Enter Value of Charge : ";
 	cin >> q;
 	cout << " Enter the Distance (2a) : ";
@@ -142,7 +142,7 @@ void torque()
 	double torq,electric_dipole,electric_field,angle ;
 	char choice1,choice2 ;
 
-	cout << "\n Torque:- " << endl;
+	cout << "\n Torque :- " << endl;
 	cout << " Do you know the value of Electric Field (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong) for electric field
 	cin >> choice1 ;
@@ -261,7 +261,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 {
 	double electric_flux,q; 		// a is distance (represented as 2a)
 
-	cout << "\n Electric Flux :- " << endl;
+	cout << "\n Electric Flux Guass's Law:- " << endl;
 	cout << " Enter Value of Charge : ";
 	cin >> q;
 
@@ -300,7 +300,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 
     surface_density = q/surface_area ;
     cout << " Surface Charge Density = " ;
-    
+
     return surface_density ;
 
  }
@@ -313,7 +313,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	double electric_field, linear_density, distance ;
 	char choice;
 
-	cout << "\n Electric Field :- " << endl;
+	cout << "\n Electric Field Charged Wire :- " << endl;
 	cout << " Do you know the value of Linear Charge Density (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -347,7 +347,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	double electric_field, surface_density ;
 	char choice;
 
-	cout << "\n Electric Field :- " << endl;
+	cout << "\n Electric Field Plane Sheet :- " << endl;
 	cout << " Do you know the value of Surface Charge Density (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -372,7 +372,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 
  }
 
-void Efield_infplane_st()  	/* Electric Field due to an uniformly charged 
+void Efield_infplane_st()  	/* Electric Field due to an uniformly charged
 								infinite plane sheet with finite thickness */
 
  {
@@ -380,7 +380,7 @@ void Efield_infplane_st()  	/* Electric Field due to an uniformly charged
 	double electric_field, surface_density ;
 	char choice;
 
-	cout << "\n Electric Field :- " << endl;
+	cout << "\n Electric Field Plane Sheet Finite Thickness:- " << endl;
 	cout << " Do you know the value of Surface Charge Density (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -405,19 +405,19 @@ void Efield_infplane_st()  	/* Electric Field due to an uniformly charged
 
  }
 
-void Efield_s_shell()  	// Electric Field due to an uniformly charged thin spherical shell 
-								
+void Efield_s_shell()  	// Electric Field due to an uniformly charged thin spherical shell
+
 {
-	
+
 	double electric_field, surface_density, R , r ;
 	char choice;
 
-	cout << "\n Electric Field :- " << endl;
+	cout << "\n Electric Field Spherical Shell :- " << endl;
 	cout << " Enter the Radius of Shell : " ;
-	cin >> R; 	//  R is the Radius of Shell 
+	cin >> R; 	//  R is the Radius of Shell
 	cout << " Enter the Distance From Cetre of Shell : " ;
 	cin >> r;	//  r is the Distance From Cetre of Shell
-	
+
 	if ( r < R )
 	{
 		electric_field = 0 ;
@@ -427,19 +427,19 @@ void Efield_s_shell()  	// Electric Field due to an uniformly charged thin spher
 		cout << " Do you know the value of Surface Charge Density (y/n) \n > " ;
 		x:  	// x is to repeatly type answer (if wrong)
 		cin >> choice ;
-		
+
 		if ( choice == 'n' || choice == 'N' )
 		{
 			surface_density = Sdensity();
 		}
-		
+
 		else if ( choice == 'y' || choice == 'Y' )
 		{
 			cout << " Enter the Surface Charge Density : ";
 			cin >> surface_density ;
 
 		}
-		
+
 		else
 		{
 			cout<< " Wrong Input \n > " << choice << endl;
@@ -452,56 +452,57 @@ void Efield_s_shell()  	// Electric Field due to an uniformly charged thin spher
 		cout << " Electric Field = " << electric_field << endl ;
 		exit(0);
 	}
-	
+
 	if ( r == R )
 	{
 		electric_field = surface_density/e0 ;
 		cout << " Electric Field = " << electric_field << endl ;
 	}
-	
+
 }
 
-			/*	
+			/*
 				  // Chapter 1 Finished \\
-					
-					
+
+
 						// Chapter 3 \\
 				   // Current Electricity \\
 												*/
-				
-				
+
+
 double I()
 
 {
-	
+
 	double time , current, qc;
 	char choice ;
+	cout << "\n Current :- " << endl;
 	cout << " Enter the Time Taken : " ;
 	cin >> time;
 	cout << " Do you know the value of Current (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
-		
+
 	if ( choice == 'n' || choice == 'N' )
 	{
 		qc = q();  		// qc is Charge
 	}
-		
+
 	else if ( choice == 'y' || choice == 'Y' )
 	{
 		cout << " Enter the Charge : ";
 		cin >> qc ;
 
 	}
-		
+
 	else
 	{
 		cout<< " Wrong Input \n > " << choice << endl;
 		goto x;
 	}
-	
-				
-	current = qc / time ;		
+
+
+	current = qc / time ;
 	cout << " Current = ";
 	return current ;
 
@@ -512,23 +513,23 @@ double Cdensity () 		// Current Density
 {
 	double current , area, cdens ;  	// cdens is current density
 	char choice ;
-	
+	cout << "\n Current Density :- " << endl;
 	cout << " Do you know the value of Current (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
-		
+
 	if ( choice == 'n' || choice == 'N' )
 	{
 		current = I();  		// q is Charge
 	}
-		
+
 	else if ( choice == 'y' || choice == 'Y' )
 	{
 		cout << " Enter the Current : ";
 		cin >> current ;
 
 	}
-		
+
 	else
 	{
 		cout<< " Wrong Input \n > " << choice << endl;
@@ -536,20 +537,20 @@ double Cdensity () 		// Current Density
 	}
 	cout << " Enter the Area " ;
 	cin >> area ;
-				
-	cdens = current / area ;		
+
+	cdens = current / area ;
 	cout << " Current Density = " ;
-	
+
 	return cdens ;
 
 }
 
-double vd() 	// Drift Velocity 
+double vd() 	// Drift Velocity
 
 {
 	double vd , electric_field, mass, rt ; 	// rt -> relaxation time || E -> Electric Field
 	char choice ;
-	
+	cout << "\n Drift Velocity :- " << endl;
 	cout << " Enter the Mass : " ;
 	cin >> mass;
 	cout << " Enter Relaxation Time : " ;
@@ -557,31 +558,31 @@ double vd() 	// Drift Velocity
 	cout << " Do you know the value of Electric Field (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
-		
+
 	if ( choice == 'n' || choice == 'N' )
 	{
 		electric_field = E();  		// q is Charge
 	}
-		
+
 	else if ( choice == 'y' || choice == 'Y' )
 	{
 		cout << " Enter the Current : ";
 		cin >> electric_field ;
 
 	}
-		
+
 	else
 	{
 		cout<< " Wrong Input \n > " << choice << endl;
 		goto x;
-	}				
-	
+	}
+
 	vd = (-1)*e*electric_field*rt/mass ;
 	cout << " Drift Velocity = " ;
-	
+
 	return vd ;
 }
-	
-	
-				
+
+
+
 #endif
