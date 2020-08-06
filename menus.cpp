@@ -168,13 +168,13 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 	      else if(o == 1)
             q(); // Quantization
         else if(o == 2)
-            cout << f() << " N" << endl; // Force
+            cout << f(); // Force
         else if(o == 3)
-            cout << E() << " N/C" << endl; // Electric Field
+            cout << E(); // Electric Field
         else if(o == 4)
-            cout << Eflux() << " Nm2/c" << endl; // Electric Flux
+            cout << Eflux(); // Electric Flux
         else if(o == 5)
-            cout << Edipole() << " Cm" << endl; // Electric Dipole
+            cout << Edipole(); // Electric Dipole
         else if(o == 6)
             torque(); // Torque
         else if(o == 7)
@@ -184,9 +184,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 9)
             Eflux_Glaw();
         else if(o == 10)
-            cout << Ldensity() << " C/m" << endl; // Linear Density
+            cout << Ldensity(); // Linear Density
         else if(o == 11)
-            cout << Sdensity() << " C/m2" << endl ; // Surface Density
+            cout << Sdensity(); // Surface Density
         else if(o == 12)
             Efield_inflong_w();
         else if(o == 13)
@@ -211,11 +211,11 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         if(o == 0)
             sb.sub_menu_physics();
         else if(o == 1)
-            cout << I() << " A " << endl;
+            cout << I();
         else if(o == 2)
-            cout << Cdensity() << " A/m2 " << endl;
+            cout << Cdensity();
         else if(o == 3)
-            cout << vd() << " m/s " << endl;
+            cout << vd();
         else
             cout << alert << " Invalid option please try again " << endl;
     }
@@ -258,7 +258,7 @@ void sub_menu::problems_menu::csc(int chapter)
     if(chapter == 1)
     {
       int o;
-      cout << " 1. Make marklist of a group of students " << endl;
+      cout << " 1. Create marklist of a group of students " << endl;
       cout << " 0. Back to Chapter Menu " << endl;
       cout << " Enter a Option : ";
       cin >> o;
