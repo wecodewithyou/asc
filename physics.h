@@ -24,7 +24,6 @@ double q()  	//Quantization
 
 	q = n*e;	//Quantization Of Charge (Eqn)
 	cout <<" Charge = "<< q << " C" << endl; 	//charge on a body
-
 	return q ;
 
 }
@@ -43,7 +42,7 @@ double f() 	// Coulomb's Law
 	cin >> r;
 
 	force = k*q1*q2/(pow(r, 2));  	// Force b/w charges
-	cout << " Force = " ;
+	cout << " Force = " << force << " N " << endl;
 
 	return force ;
 
@@ -77,7 +76,7 @@ double E()  	//Electric Field
 	cin >> q;  	// charge of particle
 
 	electric_field = force/q;
-	cout << "Electric Field = " ;
+	cout << "Electric Field = " << electric_field << " N/C " << endl;
 
 	return electric_field ;
 
@@ -114,7 +113,7 @@ double Eflux()  	//Electric Flux
 	cin >> angle ;
 
 	electric_flux = electric_field*area*cos(angle);
-	cout << " Electric Flux = " ;
+	cout << " Electric Flux = " << electric_flux << " Nm2/c " << endl;
 
 	return electric_flux ;
 
@@ -131,7 +130,7 @@ double Edipole()
 	cin >> a;
 
     electric_dipole = q*a;
-    cout << " Electric Dipole = " ;
+    cout << " Electric Dipole = " << electric_dipole << " Cm " << endl;
 
     return electric_dipole;
 
@@ -299,7 +298,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	cin >> surface_area ;
 
     surface_density = q/surface_area ;
-    cout << " Surface Charge Density = " ;
+    cout << " Surface Charge Density = "  << surface_density << " C/m " << endl;
 
     return surface_density ;
 
@@ -323,7 +322,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	}
 	else if ( choice == 'y' || choice == 'Y' )
 	{
-		cout << " Enter the Linear Charge Density : ";
+		cout << " Enter the Linear Charge Density : " << linear_density << " C/m2 " << endl;
 		cin >> linear_density ;
 
 	}
@@ -503,7 +502,7 @@ double I()
 
 
 	current = qc / time ;
-	cout << " Current = ";
+	cout << " Current = " << current << " A " << endl;
 	return current ;
 
 }
@@ -539,7 +538,7 @@ double Cdensity () 		// Current Density
 	cin >> area ;
 
 	cdens = current / area ;
-	cout << " Current Density = " ;
+	cout << " Current Density = " << cdens << " A/m2 " << endl;
 
 	return cdens ;
 
@@ -578,7 +577,7 @@ double vd() 	// Drift Velocity
 	}
 
 	vd = (-1)*e*electric_field*rt/mass ;
-	cout << " Drift Velocity = " ;
+	cout << " Drift Velocity = " << vd << " m/s " << endl;
 
 	return vd ;
 }
