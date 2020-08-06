@@ -1,5 +1,5 @@
-#ifndef __PHYSICS_H_INCLUDED__ // header lock
-#define __PHYSICS_H_INCLUDED__
+#ifndef __PHYSICS_HINCLUDED__ // header lock
+#define __PHYSICS_HINCLUDED__
 
 #include<iostream>
 #include<cmath>
@@ -11,9 +11,11 @@ const double e = 1.6e-19; 	// e is the charge of Proton or electrons
 const double k = 9e9;  // coulomb's law constant [ k = 1/4*pi*e0 ]
 const double e0 = 8.854e-12; 	// Electric Permitivity in free space
 
+						/*
 							// Chapter 1 \\
-
-void q()  	//Quantization
+					// Electric Charges and Fields \\	
+														*/
+double q()  	//Quantization
 {
 	double q,n;
 	cout << "\n Quantization:- " << endl;
@@ -22,6 +24,8 @@ void q()  	//Quantization
 
 	q = n*e;	//Quantization Of Charge (Eqn)
 	cout <<" Charge = "<< q << " C" << endl; 	//charge on a body
+	
+	return q ;
 
 }
 
@@ -457,9 +461,127 @@ void Efield_s_shell()  	// Electric Field due to an uniformly charged thin spher
 	
 }
 
-					// Chapter 1 Finished \\
+			/*	
+				  // Chapter 1 Finished \\
 					
-						// Chapter 2 \\
+					
+						// Chapter 3 \\
+				   // Current Electricity \\
+												*/
 				
+				
+double I()
+
+{
+	
+	double time , current, qc;
+	char choice ;
+	cout << " Enter the Time Taken : " ;
+	cin >> time;
+	cout << " Do you know the value of Current (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+		
+	if ( choice == 'n' || choice == 'N' )
+	{
+		qc = q();  		// qc is Charge
+	}
+		
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Charge : ";
+		cin >> qc ;
+
+	}
+		
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl;
+		goto x;
+	}
+	
+				
+	current = qc / time ;		
+	cout << " Current = ";
+	return current ;
+
+}
+
+double Cdensity () 		// Current Density
+
+{
+	double current , area, cdens ;  	// cdens is current density
+	char choice ;
+	
+	cout << " Do you know the value of Current (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+		
+	if ( choice == 'n' || choice == 'N' )
+	{
+		current = I();  		// q is Charge
+	}
+		
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Current : ";
+		cin >> current ;
+
+	}
+		
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl;
+		goto x;
+	}
+	cout << " Enter the Area " ;
+	cin >> area ;
+				
+	cdens = current / area ;		
+	cout << " Current Density = " ;
+	
+	return cdens ;
+
+}
+
+double vd() 	// Drift Velocity 
+
+{
+	double vd , electric_field, mass, rt ; 	// rt -> relaxation time || E -> Electric Field
+	char choice ;
+	
+	cout << " Enter the Mass : " ;
+	cin >> mass;
+	cout << " Enter Relaxation Time : " ;
+	cin >> rt ;
+	cout << " Do you know the value of Electric Field (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+		
+	if ( choice == 'n' || choice == 'N' )
+	{
+		electric_field = E();  		// q is Charge
+	}
+		
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Current : ";
+		cin >> electric_field ;
+
+	}
+		
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl;
+		goto x;
+	}				
+	
+	vd = (-1)*e*electric_field*rt/mass ;
+	cout << " Drift Velocity = " ;
+	
+	return vd ;
+}
+	
+	
 				
 #endif
