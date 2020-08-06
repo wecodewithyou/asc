@@ -75,18 +75,22 @@ void sub_menu::sub_menu_physics() // Function inside a class
     cout << "\t Please do in this form : 1.066e23 " << endl;
     cout << "\t If the exponent is negative , then form : 1.066e-23 . \n\n" << yellow;
     cout << " 1. Electric Charges and Fields " << endl;
+    cout << " 3. Current Electricity " << endl;
     cout << " 0. Back to Main Menu " << endl;
     cout << " Enter a Option : ";
     cin >> op;
     switch(op)
     {
-	case 0:
-	    main_menu();
-	    break;
-        case 1:
+	     case 0:
+	          main_menu();
+	          break;
+       case 1:
             pb.physics(1);
             break;
-        default:
+       case 3:
+            pb.physics(3);
+            break;
+       default:
             cout << alert << "\n Invalid option please try again " << endl;
     }
 }
@@ -101,14 +105,14 @@ void sub_menu::sub_menu_chemistry()
     cin >> op;
     switch(op)
     {
-	case 0:
-	   main_menu();
-	   break;
-        case 1:
-            pb.chemistry(1);
-            break;
-        default:
-            cout << alert << "\n Invalid option please try again "<< endl;
+	    case 0:
+	       main_menu();
+	       break;
+      case 1:
+         pb.chemistry(1);
+         break;
+      default:
+         cout << alert << "\n Invalid option please try again "<< endl;
     }
 }
 
@@ -135,10 +139,12 @@ void sub_menu::sub_menu_csc()
 
 void sub_menu::problems_menu::physics( int chapter) // Initializing function inside a subclass
 {
+  int o;
+  char ch;
+  do{
     cout << "\n PROBLEMS MENU:- " << endl;
     if(chapter == 1)
     {
-        int o;
         cout << " 1. Find Quantization " << endl;
         cout << " 2. Find Force Between 2 charges " << endl;
         cout << " 3. Find Electric Field " << endl;
@@ -155,20 +161,20 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 14. \"\" with finite thickness " << endl;
         cout << " 15. EField due to an uniformly charged thin spherical shell " << endl;
         cout << " 0. Back to Chapter Menu " << endl;
-	cout << " Enter a Option : ";
+	      cout << " Enter a Option : ";
         cin >> o;
-	if(o == 0)
-	    sb.sub_menu_physics();
-	else if(o == 1)
+	      if(o == 0)
+	          sb.sub_menu_physics();
+	      else if(o == 1)
             q(); // Quantization
         else if(o == 2)
-            cout <<  success << f() << " N" << endl; // Force
+            cout << f() << " N" << endl; // Force
         else if(o == 3)
-            cout << success << E() << " N/C" << endl; // Electric Field
+            cout << E() << " N/C" << endl; // Electric Field
         else if(o == 4)
-            cout << success << Eflux() << " Nm2/c" << endl; // Electric Flux
+            cout << Eflux() << " Nm2/c" << endl; // Electric Flux
         else if(o == 5)
-            cout << success << Edipole() << " Cm" << endl; // Electric Dipole
+            cout << Edipole() << " Cm" << endl; // Electric Dipole
         else if(o == 6)
             torque(); // Torque
         else if(o == 7)
@@ -178,9 +184,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 9)
             Eflux_Glaw();
         else if(o == 10)
-            cout << success << Ldensity() << " C/m" << endl; // Linear Density
+            cout << Ldensity() << " C/m" << endl; // Linear Density
         else if(o == 11)
-            cout << success << Sdensity() << " C/m2" << endl ; // Surface Density
+            cout << Sdensity() << " C/m2" << endl ; // Surface Density
         else if(o == 12)
             Efield_inflong_w();
         else if(o == 13)
@@ -192,42 +198,78 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else
             cout << alert << "\n Invalid option please try again" << endl;
     }
+    else if(chapter == 2)
+    {}
+    else if(chapter == 3)
+    {
+        cout << " 1. Current " << endl;
+        cout << " 2. Current Density " << endl;
+        cout << " 3. Drift Velocity " << endl;
+        cout << " 0. Back to chapter menu " << endl;
+        cout << " Enter a Option : ";
+        cin >> o;
+        if(o == 0)
+            sb.sub_menu_physics();
+        else if(o == 1)
+            cout << I() << " A " << endl;
+        else if(o == 2)
+            cout << Cdensity() << " A/m2 " << endl;
+        else if(o == 3)
+            cout << vd() << " m/s " << endl;
+        else
+            cout << alert << " Invalid option please try again " << endl;
+    }
+    cout << " Do you want to continue the program (y/n) :  ";
+    cin >> ch;
+  }while(ch == 'y' || ch == 'Y');
 }
 
 void sub_menu::problems_menu::chemistry(int chapter)
 {
+  int o;
+  char ch;
+  do
+  {
     cout << "\n PROBLEMS MENU:- " << endl;
     if(chapter == 1)
     {
-        int o;
         cout << " 1. Density of the unit cell " << endl;
         cout << " 0. Back to Chapter Menu " << endl;
-	cout << " Enter a Option : ";
+	      cout << " Enter a Option : ";
         cin >> o;
-	if(o == 0)
-	    sb.sub_menu_chemistry();
-	else if(o == 1)
-            cout << density() << endl; // Density of the unit cell
+	      if(o == 0)
+	        sb.sub_menu_chemistry();
+	      else if(o == 1)
+          cout << density() << endl; // Density of the unit cell
         else
-            cout << alert << "\n Invalid option please try again " << endl;
+          cout << alert << "\n Invalid option please try again " << endl;
     }
+    cout << " Do you want to continue the program (y/n) : ";
+    cin >> ch;
+  }while(ch == 'y' || ch == 'Y');
 }
 
 void sub_menu::problems_menu::csc(int chapter)
 {
-  cout << "\n PROBLEMS MENU:- " << endl;
-  if(chapter == 1)
-  {
-    int o;
-    cout << " 1. Make marklist of a group of students " << endl;
-    cout << " 0. Back to Chapter Menu " << endl;
-    cout << " Enter a Option : ";
-    cin >> o;
-    if(o == 0)
-        sb.sub_menu_csc();
-    else if(o == 1)
-        marklist();
-    else
-        cout << alert << "\n Invalid option please try again " << endl;
-  }
+  int o;
+  char ch;
+  do{
+    cout << "\n PROBLEMS MENU:- " << endl;
+    if(chapter == 1)
+    {
+      int o;
+      cout << " 1. Make marklist of a group of students " << endl;
+      cout << " 0. Back to Chapter Menu " << endl;
+      cout << " Enter a Option : ";
+      cin >> o;
+      if(o == 0)
+          sb.sub_menu_csc();
+      else if(o == 1)
+          marklist();
+      else
+          cout << alert << "\n Invalid option please try again " << endl;
+     }
+     cout << " Do you want to continue the program (y/n) : ";
+     cin >> ch;
+   }while(ch == 'y' || ch == 'Y');
 }
