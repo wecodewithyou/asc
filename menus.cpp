@@ -157,8 +157,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 10. Linear Charge Density " << endl;
         cout << " 11. Surface Charge Density " << endl;
         cout << " 12. EField due to a long straight uniformly charged wire " << endl;
-        cout << " 13. EField due to aan uniformly charged infinite plane sheet " << endl;
-        cout << " 14. \"\" with finite thickness " << endl;
+        cout << " 13. EField due to an uniformly charged infinite plane sheet " << endl;
+        cout << " 14. \"\" plane sheet with finite thickness " << endl;
         cout << " 15. EField due to an uniformly charged thin spherical shell " << endl;
         cout << " 0. Back to Chapter Menu " << endl;
 	      cout << " Enter a Option : ";
@@ -200,7 +200,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
     }
     else if(chapter == 2)
     {
-      
+
     }
     else if(chapter == 3)
     {
@@ -221,7 +221,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else
             cout << alert << " Invalid option please try again " << endl;
     }
-    cout << " Do you want to continue the program (y/n) :  ";
+    cout << "\n Do you want to continue the program (y/n) >  ";
     cin >> ch;
   }while(ch == 'y' || ch == 'Y');
 }
@@ -246,7 +246,7 @@ void sub_menu::problems_menu::chemistry(int chapter)
         else
           cout << alert << "\n Invalid option please try again " << endl;
     }
-    cout << " Do you want to continue the program (y/n) : ";
+    cout << "\n Do you want to continue the program (y/n) > ";
     cin >> ch;
   }while(ch == 'y' || ch == 'Y');
 }
@@ -271,7 +271,7 @@ void sub_menu::problems_menu::csc(int chapter)
       else
           cout << alert << "\n Invalid option please try again " << endl;
      }
-     cout << " Do you want to continue the program (y/n) : ";
+     cout << "\n Do you want to continue the program (y/n) > ";
      cin >> ch;
    }while(ch == 'y' || ch == 'Y');
 }
