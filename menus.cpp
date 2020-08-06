@@ -168,13 +168,13 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 	      else if(o == 1)
             q(); // Quantization
         else if(o == 2)
-            cout << f(); // Force
+            f(); // Force
         else if(o == 3)
-            cout << E(); // Electric Field
+            E(); // Electric Field
         else if(o == 4)
-            cout << Eflux(); // Electric Flux
+            Eflux(); // Electric Flux
         else if(o == 5)
-            cout << Edipole(); // Electric Dipole
+            Edipole(); // Electric Dipole
         else if(o == 6)
             torque(); // Torque
         else if(o == 7)
@@ -184,22 +184,24 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 9)
             Eflux_Glaw();
         else if(o == 10)
-            cout << Ldensity(); // Linear Density
+            Ldensity(); // Linear Density
         else if(o == 11)
-            cout << Sdensity(); // Surface Density
+            Sdensity(); // Surface Density
         else if(o == 12)
-            Efield_inflong_w();
+            Efield_inflong_w(); // Efield Charged Wire
         else if(o == 13)
-            Efield_infplane_s();
+            Efield_infplane_s(); // Efield Plane Sheet
         else if(o == 14)
-            Efield_infplane_st();
+            Efield_infplane_st(); // Efield Plane Sheet Finite Thickness
         else if(o == 15)
-            Efield_s_shell();
+            Efield_s_shell(); // Efield Spherical Shell
         else
             cout << alert << "\n Invalid option please try again" << endl;
     }
     else if(chapter == 2)
-    {}
+    {
+      
+    }
     else if(chapter == 3)
     {
         cout << " 1. Current " << endl;
@@ -211,11 +213,11 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         if(o == 0)
             sb.sub_menu_physics();
         else if(o == 1)
-            cout << I();
+            I(); // Current
         else if(o == 2)
-            cout << Cdensity();
+            Cdensity(); // Current Density
         else if(o == 3)
-            cout << vd();
+            vd(); // Drift Velocity
         else
             cout << alert << " Invalid option please try again " << endl;
     }
@@ -240,7 +242,7 @@ void sub_menu::problems_menu::chemistry(int chapter)
 	      if(o == 0)
 	        sb.sub_menu_chemistry();
 	      else if(o == 1)
-          cout << density() << endl; // Density of the unit cell
+          density(); // Density of the unit cell
         else
           cout << alert << "\n Invalid option please try again " << endl;
     }

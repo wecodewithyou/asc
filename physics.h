@@ -76,7 +76,7 @@ double E()  	//Electric Field
 	cin >> q;  	// charge of particle
 
 	electric_field = force/q;
-	cout << "Electric Field = " << electric_field << " N/C " << endl;
+	cout << " Electric Field = " << electric_field << " N/C " << endl;
 
 	return electric_field ;
 
