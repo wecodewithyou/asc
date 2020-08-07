@@ -478,7 +478,7 @@ double I()
 	cout << "\n Current :- " << endl;
 	cout << " Enter the Time Taken : " ;
 	cin >> time;
-	cout << " Do you know the value of Current (y/n) \n > " ;
+	cout << " Do you know the value of Charge (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
 
@@ -565,7 +565,7 @@ double vd() 	// Drift Velocity
 
 	else if ( choice == 'y' || choice == 'Y' )
 	{
-		cout << " Enter the Current : ";
+		cout << " Enter the Electric Field : ";
 		cin >> electric_field ;
 
 	}
@@ -582,6 +582,67 @@ double vd() 	// Drift Velocity
 	return vd ;
 }
 
+void mob()  	//Mobility
+{
+	double Vd , electric_field , mobi ; 	// mobi id the mobility
+	char choice;
+	
+	cout << " Do you know the value of Electric Field (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+
+	if ( choice == 'n' || choice == 'N' )
+	{
+		double mass , rt ;
+		cout << " Enter the Mass : " ;
+		cin >> mass;
+		cout << " Enter Relaxation Time : " ;
+		cin >> rt ;  		
+		
+		mobi = e * rt/mass;
+		goto y;
+	}
+	
+
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Electric Field : ";
+		cin >> electric_field ;
+
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl;
+		goto x;
+	}
+	
+	cout << " Do you know the value of Drift Velocity (y/n) \n > " ;
+	z:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+
+	if ( choice == 'n' || choice == 'N' )
+	{
+		Vd = vd();  		// q is Charge
+	}
+
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Drift Velocity : ";
+		cin >> Vd ;
+
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl;
+		goto z;
+	}
+	
+	mobi = Vd / electric_field ;
+	y:
+	cout << " Mobility = " << mobi << endl;
+}
 
 
 #endif
