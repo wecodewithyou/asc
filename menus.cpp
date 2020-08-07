@@ -57,6 +57,7 @@ void main_menu()
             cout << "\n Description : A simple all in one science subject"<<endl<<" problem solver for +2 Students " << endl;
             cout << "               Developed by Spectr3 , Ph0en1x and Mr.Unkn0wn " << endl;
             cout << "\n Thank You For using our program <3 <3 <3 \n\n" << clear_color << endl;
+            exit(0);
             break;
         case 0:
             cout << alert << "\n Closing Program ...... " << clear_color << endl;
@@ -207,6 +208,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 1. Current " << endl;
         cout << " 2. Current Density " << endl;
         cout << " 3. Drift Velocity " << endl;
+        cout << " 4. Mobility " << endl;
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
@@ -218,6 +220,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             Cdensity(); // Current Density
         else if(o == 3)
             vd(); // Drift Velocity
+        else if(o == 4)
+            mob(); // Mobility
         else
             cout << alert << " Invalid option please try again " << endl;
     }
