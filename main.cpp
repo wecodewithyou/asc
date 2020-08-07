@@ -1,7 +1,6 @@
 #include "menus.cpp"
 #include <iostream>
 #include <string>
-#include <fstream>
 #include <cmath>
 #include <iomanip>
 #include <thread>
@@ -25,14 +24,18 @@ int main()
 void banner()
 
 {
-    string str;
-    fstream file("sangit.txt",ios::in);
-    while(getline(file,str))
-    {
-        cout<< str << endl;
+    cout << R"( ____    ____     ___        _   _____    ____   _____          __  __
+|  _ \  |  _ \   / _ \      | | | ____|  / ___| |_   _|         \ \/ /
+| |_) | | |_) | | | | |  _  | | |  _|   | |       | |    _____   \  /
+|  __/  |  _ <  | |_| | | |_| | | |___  | |___    | |   |_____|  /  \
+|_|     |_| \_\  \___/   \___/  |_____|  \____|   |_|           /_/\_\
 
-    }
-    file.close();
+
+                GITHUB:https://www.github.com/wecodewithyou
+                CONTACT INFO:wecodewithyou2020@protonmail.com
+                DEVS:Mr.Unkn0wn,Ph0en1x,Sp3ctr3 
+		)";
+	cout << "\n\n";
 }
 
 void show_progress_bar(std::ostream& os, int time, std::string message, wchar_t symbol)
