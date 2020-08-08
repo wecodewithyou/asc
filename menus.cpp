@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "physics.h"
 #include "chemistry.h"
 #include "csc.h"
@@ -51,11 +52,12 @@ void main_menu()
             sb.sub_menu_csc();
             break;
         case 4:
-            cout << success << "\n\t\t\t\t\t PROJECT_X \n\n";
+            cout << success << "\n\t\t\t ASC - Advanced Science Calculator \n\n";
             cout << info << " Build   : Pre-Alpha Build "  << endl;
             cout << " Version : v0.1 pre-alpha build " << endl;
-            cout << "\n Description : A simple all in one science subject"<<endl<<" problem solver for +2 Students " << endl;
-            cout << "               Developed by Spectr3 , Ph0en1x and Mr.Unkn0wn " << endl;
+            cout << "\n Description : A simple all in one science subject"<<endl;
+            cout <<"                problem solver for +2 Students " << endl;
+            cout << "               Developed by Mr. Unkn0wn , Ph0en1x and Spectr3 " << endl;
             cout << "\n Thank You For using our program <3 <3 <3 \n\n" << clear_color << endl;
             exit(0);
             break;
