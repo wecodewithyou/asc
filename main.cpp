@@ -13,9 +13,10 @@ void show_progress_bar(std::ostream& os, int time, std::string message, wchar_t 
 int main()
 {
     cout << "\033[1;36m"; // cyan color
-    banner();
-    show_progress_bar(std::clog, 100, "Loading", 1060);
+    show_progress_bar(std::clog, 50, "Loading", 1060);
     cout << "completed!!" << endl;
+    system("clear");
+    banner();
     main_menu();
     cout << "\033[0m"; // normal color , white on black
     return 0;
@@ -24,18 +25,26 @@ int main()
 void banner()
 
 {
-    cout << R"( ____    ____     ___        _   _____    ____   _____          __  __
-|  _ \  |  _ \   / _ \      | | | ____|  / ___| |_   _|         \ \/ /
-| |_) | | |_) | | | | |  _  | | |  _|   | |       | |    _____   \  /
-|  __/  |  _ <  | |_| | | |_| | | |___  | |___    | |   |_____|  /  \
-|_|     |_| \_\  \___/   \___/  |_____|  \____|   |_|           /_/\_\
+    cout << R"(
+
+
+
+  _______ _______ _______     __          __             _____    _______
+ |   _   |   _   |   _   |   |  |--.-----|  |_.---.-.   | _   |  |   _   |
+ |.  1   |   1___|.  1___|   |  _  |  -__|   _|  _  |   |.|   |__|.  |   |
+ |.  _   |____   |.  |___    |_____|_____|____|___._|   `-|.  |__|.  |   |
+ |:  |   |:  1   |:  1   |                                |:  |  |:  1   |
+ |::.|:. |::.. . |::.. . |                                |::.|  |::.. . |
+ `--- ---`-------`-------'                                `---'  `-------'
+
+
 
 
                 GITHUB:https://www.github.com/wecodewithyou
                 CONTACT INFO:wecodewithyou2020@protonmail.com
-                DEVS:Mr.Unkn0wn,Ph0en1x,Sp3ctr3 
+                DEVS:Mr.Unkn0wn,Ph0en1x,Sp3ctr3
 		)";
-	cout << "\n\n";
+	cout << "\n";
 }
 
 void show_progress_bar(std::ostream& os, int time, std::string message, wchar_t symbol)
