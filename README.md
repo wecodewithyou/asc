@@ -1,4 +1,4 @@
-# project_X
+# Advanced Science Calculator (ASC)
 
 All in One Science subjects problem solver for +2 students , Currently supports Physics problems
 
