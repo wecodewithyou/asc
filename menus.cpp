@@ -185,7 +185,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 8)
             EofDipole_el(); // Electric Field of Electric Dipole at Equatorial Line
         else if(o == 9)
-            Eflux_Glaw();
+            Eflux_Glaw(); // Electric Flux using Guass's Law 
         else if(o == 10)
             Ldensity(); // Linear Density
         else if(o == 11)
@@ -211,6 +211,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 2. Current Density " << endl;
         cout << " 3. Drift Velocity " << endl;
         cout << " 4. Mobility " << endl;
+        cout << " 5. Resistance " << endl;
+        cout << " 6. Potential Difference (Ohm's Law) " << endl;
+        cout << " 7. Resistivity " << endl;
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
@@ -224,6 +227,12 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             vd(); // Drift Velocity
         else if(o == 4)
             mob(); // Mobility
+        else if(o == 5)
+            R(); // Resistance
+        else if(o == 6)
+            V(); // Potential Difference
+        else if(o == 7)
+            rst(); // Resistivity
         else
             cout << alert << " Invalid option please try again " << endl;
     }
