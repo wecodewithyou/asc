@@ -519,7 +519,7 @@ double Cdensity () 		// Current Density
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		current = I();  		// q is Charge
+		current = I();  		
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -560,7 +560,7 @@ double vd() 	// Drift Velocity
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		electric_field = E();  		// q is Charge
+		electric_field = E();  		
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -584,7 +584,7 @@ double vd() 	// Drift Velocity
 
 void mob()  	//Mobility
 {
-	double Vd , electric_field , mobi ; 	// mobi id the mobility
+	double Vd , electric_field , mobi ; 	// mobi is the mobility
 	char choice;
 	
 	cout << " Do you know the value of Electric Field (y/n) \n > " ;
@@ -623,7 +623,7 @@ void mob()  	//Mobility
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		Vd = vd();  		// q is Charge
+		Vd = vd();  		
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -641,8 +641,100 @@ void mob()  	//Mobility
 	
 	mobi = Vd / electric_field ;
 	y:
-	cout << " Mobility = " << mobi << endl;
+	cout << " Mobility = " << mobi << " mC/Ns" << endl;
 }
 
+double V() 		// OHM's Law (Potencial Difference)
+
+{
+	double potential_differences , current , resistance ;
+	char choice, choice1 ;
+	
+	cout << " Do you know the value of Current (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+
+	if ( choice == 'n' || choice == 'N' )
+	{
+		current = I();  
+	}
+
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Current : " ;
+		cin >> current ;
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " << choice << endl << '>';
+		goto x;
+	}
+	cout << " Do you know the value of Resistance (y/n) \n > " ;
+	z:  	// x is to repeatly type answer (if wrong)
+	cin >> choice1 ;
+
+	if ( choice1 == 'n' || choice1 == 'N' )
+	{
+		resistance = R();  		
+	}
+
+	else if ( choice1 == 'y' || choice1 == 'Y' )
+	{
+		cout << " Enter the Resistance : " ;
+		cin >> resistance ;
+
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " << choice1 << endl  << '>' ;
+		goto z;
+	}
+	
+	potential_difference = current * resistance ;
+	cout << " Potential Difference = " << potential_difference << " V" << endl;
+	
+	return potential_difference ;
+}
+
+double R()  	// Resistance
+
+{
+	double resistance , length , area , rst; 	//rst is the resistivity
+	
+	cout << " Enter the length of conductor : ";
+	cin >> length ;
+	cout >> " Enter the Cross Sectional Area of the conductor : ";
+	cin >> area ;
+	cout << " Enter the Resistivity : " ;
+	cin >> rst ;
+	
+	resistance = rst * length/area ;
+	cout << " Resistance = " << resistance << " ohm" << endl;
+	
+	return resistance ;
+	
+}
+
+double rst()  	// Resistivity
+
+{
+	double resistance , length , area , rst; 	//rst is the resistivity
+	
+	cout << " Enter the length of conductor : ";
+	cin >> length ;
+	cout >> " Enter the Cross Sectional Area of the conductor : ";
+	cin >> area ;
+	cout << " Enter the Resistance : " ;
+	cin >> resistance ;
+	
+	rst = resistance * area/length ;
+	cout << " Resistivity = " << rst << " ohm m"<< endl;
+	
+	return rst ;
+	
+}
+ 
 
 #endif
