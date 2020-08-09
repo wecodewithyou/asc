@@ -644,10 +644,29 @@ void mob()  	//Mobility
 	cout << " Mobility = " << mobi << " mC/Ns" << endl;
 }
 
+double R()  	// Resistance
+
+{
+	double resistance , length , area , rst; 	//rst is the resistivity
+	
+	cout << " Enter the length of conductor : ";
+	cin >> length ;
+	cout << " Enter the Cross Sectional Area of the conductor : ";
+	cin >> area ;
+	cout << " Enter the Resistivity : " ;
+	cin >> rst ;
+	
+	resistance = rst * length/area ;
+	cout << " Resistance = " << resistance << " ohm" << endl;
+	
+	return resistance ;
+	
+}
+
 double V() 		// OHM's Law (Potencial Difference)
 
 {
-	double potential_differences , current , resistance ;
+	double potential_difference , current , resistance ;
 	char choice, choice1 ;
 	
 	cout << " Do you know the value of Current (y/n) \n > " ;
@@ -698,25 +717,6 @@ double V() 		// OHM's Law (Potencial Difference)
 	return potential_difference ;
 }
 
-double R()  	// Resistance
-
-{
-	double resistance , length , area , rst; 	//rst is the resistivity
-	
-	cout << " Enter the length of conductor : ";
-	cin >> length ;
-	cout >> " Enter the Cross Sectional Area of the conductor : ";
-	cin >> area ;
-	cout << " Enter the Resistivity : " ;
-	cin >> rst ;
-	
-	resistance = rst * length/area ;
-	cout << " Resistance = " << resistance << " ohm" << endl;
-	
-	return resistance ;
-	
-}
-
 double rst()  	// Resistivity
 
 {
@@ -724,7 +724,7 @@ double rst()  	// Resistivity
 	
 	cout << " Enter the length of conductor : ";
 	cin >> length ;
-	cout >> " Enter the Cross Sectional Area of the conductor : ";
+	cout << " Enter the Cross Sectional Area of the conductor : ";
 	cin >> area ;
 	cout << " Enter the Resistance : " ;
 	cin >> resistance ;
