@@ -33,6 +33,9 @@ void main_menu()
 {
     int op;
     cout << yellow << "\n MAIN MENU:- " << endl;
+    cout << info << " Note :- While inputing values like 1.066*10^23 , " << endl;
+    cout << "\t Please do in this form : 1.066e23 " << endl;
+    cout << "\t If the exponent is negative , then form : 1.066e-23 . \n\n" << yellow;
     cout << " 1. Physics " << endl;
     cout << " 2. Chemistry " << endl;
     cout << " 3. Computer Science " << endl;
@@ -74,9 +77,6 @@ void sub_menu::sub_menu_physics() // Function inside a class
 {
     int op;
     cout << "\n CHAPTER MENU:- " << endl;
-    cout << info << " Note :- While inputing values like 1.066*10^23 , " << endl;
-    cout << "\t Please do in this form : 1.066e23 " << endl;
-    cout << "\t If the exponent is negative , then form : 1.066e-23 . \n\n" << yellow;
     cout << " 1. Electric Charges and Fields " << endl;
     cout << " 3. Current Electricity " << endl;
     cout << " 0. Back to Main Menu " << endl;
@@ -185,7 +185,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 8)
             EofDipole_el(); // Electric Field of Electric Dipole at Equatorial Line
         else if(o == 9)
-            Eflux_Glaw(); // Electric Flux using Guass's Law 
+            Eflux_Glaw(); // Electric Flux using Guass's Law
         else if(o == 10)
             Ldensity(); // Linear Density
         else if(o == 11)
@@ -251,6 +251,8 @@ void sub_menu::problems_menu::chemistry(int chapter)
     if(chapter == 1)
     {
         cout << " 1. Density of the unit cell " << endl;
+        cout << " 2. Calculate atomic mass of a element " << endl;
+        cout << " 3. Total number of atoms " << endl;
         cout << " 0. Back to Chapter Menu " << endl;
 	      cout << " Enter a Option : ";
         cin >> o;
@@ -258,6 +260,10 @@ void sub_menu::problems_menu::chemistry(int chapter)
 	        sb.sub_menu_chemistry();
 	      else if(o == 1)
           density(); // Density of the unit cell
+        else if(o == 2)
+          atomic_mass();
+        else if(o == 3)
+          no_of_atoms();
         else
           cout << alert << "\n Invalid option please try again " << endl;
     }
