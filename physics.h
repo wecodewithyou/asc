@@ -328,7 +328,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	}
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 	cout << " Enter the Distance : " ;
@@ -362,7 +362,7 @@ void Eflux_Glaw() 	// Electric Flux using Gauss's Law
 	}
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 
@@ -395,7 +395,7 @@ void Efield_infplane_st()  	/* Electric Field due to an uniformly charged
 	}
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 
@@ -441,7 +441,7 @@ void Efield_s_shell()  	// Electric Field due to an uniformly charged thin spher
 
 		else
 		{
-			cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 			goto x;
 		}
 
@@ -496,7 +496,7 @@ double I()
 
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 
@@ -531,7 +531,7 @@ double Cdensity () 		// Current Density
 
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 	cout << " Enter the Area " ;
@@ -572,7 +572,7 @@ double vd() 	// Drift Velocity
 
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 
@@ -613,7 +613,7 @@ void mob()  	//Mobility
 
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl;
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 	
@@ -671,7 +671,7 @@ double V() 		// OHM's Law (Potencial Difference)
 	
 	cout << " Do you know the value of Current (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
-	cin >> choice ;
+	cin >> choice , choice1 ;
 
 	if ( choice == 'n' || choice == 'N' )
 	{
@@ -686,7 +686,7 @@ double V() 		// OHM's Law (Potencial Difference)
 
 	else
 	{
-		cout<< " Wrong Input \n > " << choice << endl << '>';
+		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
 	cout << " Do you know the value of Resistance (y/n) \n > " ;
@@ -707,7 +707,7 @@ double V() 		// OHM's Law (Potencial Difference)
 
 	else
 	{
-		cout<< " Wrong Input \n > " << choice1 << endl  << '>' ;
+		cout<< " Wrong Input \n > " ;
 		goto z;
 	}
 	
@@ -735,6 +735,126 @@ double rst()  	// Resistivity
 	return rst ;
 	
 }
+
+
+void vohm()  	//Vector form of ohm's law
+
+{
+	double electric_field , charge_density , resistivity ;
+	char choice , choice1;
+	
+	cout << " Do you know the value of Resistivity (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+
+	if ( choice == 'n' || choice == 'N' )
+	{
+		resistivity = rst();  
+	}
+
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Value of Resistivity : " ;
+		cin >> resistivity ;
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+	
+	cout << " Do you know the value of Charge Density (y/n) \n > " ;
+	z:  	// x is to repeatly type answer (if wrong)
+	cin >> choice1 ;
+
+	if ( choice1 == 'n' || choice1 == 'N' )
+	{
+		charge_density = Cdensity();  		
+	}
+
+	else if ( choice1 == 'y' || choice1 == 'Y' )
+	{
+		cout << " Enter the Value of Charge Density : " ;
+		cin >> charge_density ;
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " ;
+		goto z;
+	}
+	
+	electric_field = charge_density*resistivity ;
+	cout << " Electric Field = " << electric_field << " V/m" << endl;
  
+}
+
+void G() 	// conductance
+
+{
+	double conductance , resistance ;
+	char choice ;
+	
+	cout << " Do you know the value of Resistance (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+
+	if ( choice == 'n' || choice == 'N' )
+	{
+		resistance = R();  
+	}
+
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Resistance : ";
+		cin >> resistance ;
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+	
+	conductance = 1/resistance ;
+	cout << " Conductance = " << conductance << " S" << endl ; // unit is seimen or ohm(inverse)
+	
+}
+
+
+void cndct() 	// conductivity
+
+{
+	double conductivity , resistivity ;
+	char choice ;
+	
+	cout << " Do you know the value of Resistivity (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice ;
+
+	if ( choice == 'n' || choice == 'N' )
+	{
+		resistivity = rst();  
+	}
+
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Value of Resistivity : " ;
+		cin >> resistivity ;
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+
+	conductivity = 1/resistiviy ;
+	cout << " Conductivity = " << conductiviy << " S/m" << endl ; // unit is seimen/metre or ohm(inverse) metre(inverse)
+	
+}
+
+
 
 #endif
