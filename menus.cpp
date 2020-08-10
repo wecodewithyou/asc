@@ -210,10 +210,13 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 1. Current " << endl;
         cout << " 2. Current Density " << endl;
         cout << " 3. Drift Velocity " << endl;
-        cout << " 4. Mobility " << endl;
-        cout << " 5. Resistance " << endl;
-        cout << " 6. Potential Difference (Ohm's Law) " << endl;
+        cout << " 4. Mobility " << endl;                        
+        cout << " 5. Potential Difference (Ohm's Law) " << endl;
+        cout << " 6. Resistance " << endl;
         cout << " 7. Resistivity " << endl;
+        cout << " 8. Electric Field by Vector Form of Ohm's Law " << endl;
+        cout << " 9. Condantance " << endl;
+        cout << " 10. Condactivity " << endl;
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
@@ -228,11 +231,17 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else if(o == 4)
             mob(); // Mobility
         else if(o == 5)
-            R(); // Resistance
+            V(); // Potential Difference            
         else if(o == 6)
-            V(); // Potential Difference
+            R(); // Resistance
         else if(o == 7)
             rst(); // Resistivity
+        else if(o == 8)
+            vohm(); // Electric Field
+        else if(o == 9)
+            G(); // Conductance
+        else if(o == 10)
+            cndct(); // Condactivity
         else
             cout << alert << " Invalid option please try again " << endl;
     }
