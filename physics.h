@@ -850,8 +850,8 @@ void cndct() 	// conductivity
 		goto x;
 	}
 
-	conductivity = 1/resistiviy ;
-	cout << " Conductivity = " << conductiviy << " S/m" << endl ; // unit is seimen/metre or ohm(inverse) metre(inverse)
+	conductivity = 1/resistivity ;
+	cout << " Conductivity = " << conductivity << " S/m" << endl ; // unit is seimen/metre or ohm(inverse) metre(inverse)
 	
 }
 
