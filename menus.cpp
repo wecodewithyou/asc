@@ -212,11 +212,12 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 3. Drift Velocity " << endl;
         cout << " 4. Mobility " << endl;                        
         cout << " 5. Potential Difference (Ohm's Law) " << endl;
-        cout << " 6. Resistance " << endl;
-        cout << " 7. Resistivity " << endl;
-        cout << " 8. Electric Field by Vector Form of Ohm's Law " << endl;
+        cout << " 6. Electric Field by Vector Form of Ohm's Law " << endl;        
+        cout << " 7. Resistance " << endl;
+        cout << " 8. Resistivity " << endl;
         cout << " 9. Condantance " << endl;
-        cout << " 10. Condactivity " << endl;
+        cout << " 10.Condactivity " << endl;
+        cout << " 11.Find color of bands of Resistor " << endl; 
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
@@ -242,6 +243,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             G(); // Conductance
         else if(o == 10)
             cndct(); // Condactivity
+        else if(o == 11)
+			codetocolor(); // color of bands
         else
             cout << alert << " Invalid option please try again " << endl;
     }
