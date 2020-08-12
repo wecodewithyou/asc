@@ -859,24 +859,25 @@ void cndct() 	// conductivity
 void codetocolor() 		// Convert Color Code to Code
 
 {
-	string color[10] , tolore[10];
 	int i , j , digit[4];
 	string first_color, second_color, third_color, fourth_color ;
 	
-	color[0] = "\033[1;30m Black " ;  	// Color code is included
-	color[1] = "\033[1;33m Brown " ;
-	color[2] = "\033[1;31m Red " ;
-	color[3] = "\033[1;31m Orange " ;
-	color[4] = "\033[1;33m Yellow " ;
-	color[5] = "\033[1;32m Green " ;
-	color[6] = "\033[1;34m Blue " ;
-	color[7] = "\033[1;35m Violet " ;
-	color[8] = "\033[1;37m Grey " ;
-	color[9] = "\033[1;37m White " ;
+	const char* color[] = {
+			 "\033[1;30m Black ",
+	       		 "\033[1;33m Brown ",
+		 	 "\033[1;31m Red ",
+			 "\033[1;31m Orange ",
+			 "\033[1;33m Yellow ",
+			 "\033[1;32m Green ",
+			 "\033[1;34m Blue ",
+			 "\033[1;35m Violet ",
+			 "\033[1;30m Grey ",
+			 "\033[1;37m White "};	 // Color codes included
 	
-	tolore[5] = "\033[1;33m Gold " ;
-	tolore[10] = "\033[1;37m Silver " ;
+	const char* tolore[] = {"\033[1;33m Gold ",
+		"\033[1;37m Silver " };
 	
+	char reset[] = "\033[0m";
 	
 	cout << " Enter the First Number (10's place) : " ; 	//first digit
 	cin >> digit[0] ;
@@ -914,15 +915,19 @@ void codetocolor() 		// Convert Color Code to Code
 			}	
 			else if( i == 3 )
 			{
-				if( digit[i] == j )
+				if( digit[i] == 5 )
 				{
-					fourth_color = tolore[j] ;
+					fourth_color = tolore[0];
+				}
+				else if(digit[i] == 10)
+				{
+					fourth_color = tolore[1];
 				}
 			}
 		}
 	}
 	cout << first_color << '\t' << second_color << '\t' << third_color << '\t' << fourth_color << endl ;
-	cout << " 10's " << '\t' << " 1's " << '\t' << " Power " << '\t' << " Tolerance " << endl ;
+	cout << " 10's " << '\t' << " 1's " << '\t' << " Power " << '\t' << " Tolerance " << reset <<endl ;
 	 
 }
 
