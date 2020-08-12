@@ -671,7 +671,7 @@ double V() 		// OHM's Law (Potencial Difference)
 	
 	cout << " Do you know the value of Current (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
-	cin >> choice , choice1 ;
+	cin >> choice ;
 
 	if ( choice == 'n' || choice == 'N' )
 	{
@@ -826,7 +826,7 @@ void G() 	// conductance
 void cndct() 	// conductivity
 
 {
-	double conductivity , resistivity ;
+	double conductivity,resistivity ;
 	char choice ;
 	
 	cout << " Do you know the value of Resistivity (y/n) \n > " ;
@@ -850,11 +850,81 @@ void cndct() 	// conductivity
 		goto x;
 	}
 
-	conductivity = 1/resistiviy ;
-	cout << " Conductivity = " << conductiviy << " S/m" << endl ; // unit is seimen/metre or ohm(inverse) metre(inverse)
+	conductivity = 1/resistivity ;
+	cout << " Conductivity = " << conductivity << " S/m" << endl ; // unit is seimen/metre or ohm(inverse) metre(inverse)
 	
 }
 
+
+void codetocolor() 		// Convert Color Code to Code
+
+{
+	string color[10] , tolore[10];
+	int i , j , digit[4];
+	string first_color, second_color, third_color, fourth_color ;
+	
+	color[0] = "\033[1;30m Black " ;  	// Color code is included
+	color[1] = "\033[1;33m Brown " ;
+	color[2] = "\033[1;31m Red " ;
+	color[3] = "\033[1;31m Orange " ;
+	color[4] = "\033[1;33m Yellow " ;
+	color[5] = "\033[1;32m Green " ;
+	color[6] = "\033[1;34m Blue " ;
+	color[7] = "\033[1;35m Violet " ;
+	color[8] = "\033[1;37m Grey " ;
+	color[9] = "\033[1;37m White " ;
+	
+	tolore[5] = "\033[1;33m Gold " ;
+	tolore[10] = "\033[1;37m Silver " ;
+	
+	
+	cout << " Enter the First Number (10's place) : " ; 	//first digit
+	cin >> digit[0] ;
+	cout << " Enter the Second Number (1's place) : " ; 	//second digit
+	cin >> digit[1] ;
+	cout << " Enter the Number of Zero (Power of 10) : " ; 	//10 raised to?
+	cin >> digit[2] ;
+	cout << " Enter the Tolerance (only digit) : " ; 	// It will be in the Form ( + or - number % )
+	cin >> digit[3] ;
+	
+	for( i=0 ; i<=3 ; i++ )
+	{
+		for( j=0 ; j<10 ; j++ )
+		{
+			if( i == 0 )
+			{
+				if( digit[i] == j )
+				{
+					first_color = color[j] ;
+				}
+			}
+			else if( i == 1 )
+			{
+				if( digit[i] == j )
+				{
+					second_color = color[j] ;
+				}
+			}
+			else if( i == 2 )
+			{
+				if( digit[i] == j )
+				{
+					third_color = color[j] ;
+				}
+			}	
+			else if( i == 3 )
+			{
+				if( digit[i] == j )
+				{
+					fourth_color = tolore[j] ;
+				}
+			}
+		}
+	}
+	cout << first_color << '\t' << second_color << '\t' << third_color << '\t' << fourth_color << endl ;
+	cout << " 10's " << '\t' << " 1's " << '\t' << " Power " << '\t' << " Tolerance " << endl ;
+	 
+}
 
 
 #endif
