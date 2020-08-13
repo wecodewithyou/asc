@@ -864,7 +864,7 @@ void codetocolor() 		// Convert Color Code to Code
 	
 	const char* color[] = {
 			 "\033[1;30m Black ",
-	       		 "\033[1;33m Brown ",
+			 "\033[1;33m Brown ",
 		 	 "\033[1;31m Red ",
 			 "\033[1;31m Orange ",
 			 "\033[1;33m Yellow ",
@@ -874,7 +874,8 @@ void codetocolor() 		// Convert Color Code to Code
 			 "\033[1;30m Grey ",
 			 "\033[1;37m White "};	 // Color codes included
 	
-	const char* tolore[] = {"\033[1;33m Gold ",
+	const char* tolore[] = {
+		"\033[1;33m Gold ",
 		"\033[1;37m Silver " };
 	
 	char reset[] = "\033[0m";
@@ -930,6 +931,101 @@ void codetocolor() 		// Convert Color Code to Code
 	cout << " 10's " << '\t' << " 1's " << '\t' << " Power " << '\t' << " Tolerance " << reset <<endl ;
 	 
 }
+
+void colortocode () 		// Convert Color Code to Code
+
+{
+	int i , j ;
+	const char* color[] = {
+			 " Black ",
+	       	 " Brown ",
+		 	 " Red ",
+			 " Orange ",
+			 " Yellow ",
+			 " Green ",
+			 " Blue ",
+			 " Violet ",
+			 " Grey ",
+			 " White "};
+	const char* tolore[] = {
+		" Gold ",
+		" Silver " };
+	
+	
+	int first_number, second_number, third_number, fourth_number ;
+	char choice ;
+	string colour[4] ;
+	
+	cout << " Enter the First Colour (1st Band) : " ; 	//first digit
+	cin >> colour[0] ;
+	cout << " Enter the Second Colour (2nd Band) : " ; 	//second digit
+	cin >> colour[1] ;
+	cout << " Enter the Third Colour (3rd Band) : " ; 	//10 raised to?
+	cin >> colour[2] ;
+	cout << " Does it have Colour (y/n) " ;
+	x:
+	cin >> choice ;
+	
+	if ( choice == 'n' || choice == 'N' )
+	{
+		fourth_number = 20 ;  
+	}
+
+	else if ( choice == 'y' || choice == 'Y' )
+	{
+		cout << " Enter the Fourth Colour : " ; 
+		cin >> colour[3] ;
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+	
+	for( i=0 ; i<=3 ; i++ )
+	{
+		for( j=0 ; j<10 ; j++ )
+		{
+			if( i == 0 )
+			{
+				if( colour[i] == color[j] )
+				{
+					first_number = j ;
+				}
+			}
+			else if( i == 1 )
+			{
+				if( colour[i] == color[j] )
+				{
+					second_number = j ;
+				}
+			}
+			else if( i == 2 )
+			{
+				if( colour[i] == color[j] )
+				{
+					third_number = j ;
+				}
+			}	
+			else if( i == 3 )
+			{
+				if( colour[i] == tolore[0] )
+				{
+					fourth_number = 5 ;
+				}
+				else if(colour[i] == tolore[1])
+				{
+					fourth_number = 10 ;
+				}
+			}
+		}
+	}
+	cout << first_number << second_number << " x 10^" << third_number << " +- " << fourth_number << "%" << endl ;
+	 
+}
+
+
 
 
 #endif
