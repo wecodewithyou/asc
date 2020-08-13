@@ -246,7 +246,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             cndct(); // Condactivity
         else if(o == 11)
 			codetocolor(); // color of bands
-		elde if(o == 12)
+		else if(o == 12)
 			colortocode(); // resistance of bands
         else
             cout << alert << " Invalid option please try again " << endl;
@@ -289,7 +289,6 @@ void sub_menu::problems_menu::chemistry(int chapter)
 
 void sub_menu::problems_menu::csc(int chapter)
 {
-  int o;
   char ch;
   do{
     cout << "\n PROBLEMS MENU:- " << endl;
