@@ -218,7 +218,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 9. Condantance " << endl;
         cout << " 10.Condactivity " << endl;
         cout << " 11.Find color of bands of Resistor " << endl; 
-        cout << " 11.Find Resistance of bands of a Resistor " << endl; 
+        cout << " 12.Find Resistance of bands of a Resistor " << endl; 
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
