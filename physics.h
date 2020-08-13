@@ -3,6 +3,7 @@
 
 #include<iostream>
 #include<cmath>
+#include<vector>
 using namespace std;
 
 // Constants
@@ -519,7 +520,7 @@ double Cdensity () 		// Current Density
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		current = I();  		
+		current = I();
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -560,7 +561,7 @@ double vd() 	// Drift Velocity
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		electric_field = E();  		
+		electric_field = E();
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -586,7 +587,7 @@ void mob()  	//Mobility
 {
 	double Vd , electric_field , mobi ; 	// mobi is the mobility
 	char choice;
-	
+
 	cout << " Do you know the value of Electric Field (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
@@ -597,12 +598,12 @@ void mob()  	//Mobility
 		cout << " Enter the Mass : " ;
 		cin >> mass;
 		cout << " Enter Relaxation Time : " ;
-		cin >> rt ;  		
-		
+		cin >> rt ;
+
 		mobi = e * rt/mass;
 		goto y;
 	}
-	
+
 
 	else if ( choice == 'y' || choice == 'Y' )
 	{
@@ -616,14 +617,14 @@ void mob()  	//Mobility
 		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
-	
+
 	cout << " Do you know the value of Drift Velocity (y/n) \n > " ;
 	z:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		Vd = vd();  		
+		Vd = vd();
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -638,7 +639,7 @@ void mob()  	//Mobility
 		cout<< " Wrong Input \n > " << choice << endl;
 		goto z;
 	}
-	
+
 	mobi = Vd / electric_field ;
 	y:
 	cout << " Mobility = " << mobi << " mC/Ns" << endl;
@@ -648,19 +649,19 @@ double R()  	// Resistance
 
 {
 	double resistance , length , area , rst; 	//rst is the resistivity
-	
+
 	cout << " Enter the length of conductor : ";
 	cin >> length ;
 	cout << " Enter the Cross Sectional Area of the conductor : ";
 	cin >> area ;
 	cout << " Enter the Resistivity : " ;
 	cin >> rst ;
-	
+
 	resistance = rst * length/area ;
 	cout << " Resistance = " << resistance << " ohm" << endl;
-	
+
 	return resistance ;
-	
+
 }
 
 double V() 		// OHM's Law (Potencial Difference)
@@ -668,14 +669,14 @@ double V() 		// OHM's Law (Potencial Difference)
 {
 	double potential_difference , current , resistance ;
 	char choice, choice1 ;
-	
+
 	cout << " Do you know the value of Current (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		current = I();  
+		current = I();
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -695,7 +696,7 @@ double V() 		// OHM's Law (Potencial Difference)
 
 	if ( choice1 == 'n' || choice1 == 'N' )
 	{
-		resistance = R();  		
+		resistance = R();
 	}
 
 	else if ( choice1 == 'y' || choice1 == 'Y' )
@@ -710,10 +711,10 @@ double V() 		// OHM's Law (Potencial Difference)
 		cout<< " Wrong Input \n > " ;
 		goto z;
 	}
-	
+
 	potential_difference = current * resistance ;
 	cout << " Potential Difference = " << potential_difference << " V" << endl;
-	
+
 	return potential_difference ;
 }
 
@@ -721,19 +722,19 @@ double rst()  	// Resistivity
 
 {
 	double resistance , length , area , rst; 	//rst is the resistivity
-	
+
 	cout << " Enter the length of conductor : ";
 	cin >> length ;
 	cout << " Enter the Cross Sectional Area of the conductor : ";
 	cin >> area ;
 	cout << " Enter the Resistance : " ;
 	cin >> resistance ;
-	
+
 	rst = resistance * area/length ;
 	cout << " Resistivity = " << rst << " ohm m"<< endl;
-	
+
 	return rst ;
-	
+
 }
 
 
@@ -742,14 +743,14 @@ void vohm()  	//Vector form of ohm's law
 {
 	double electric_field , charge_density , resistivity ;
 	char choice , choice1;
-	
+
 	cout << " Do you know the value of Resistivity (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		resistivity = rst();  
+		resistivity = rst();
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -763,14 +764,14 @@ void vohm()  	//Vector form of ohm's law
 		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
-	
+
 	cout << " Do you know the value of Charge Density (y/n) \n > " ;
 	z:  	// x is to repeatly type answer (if wrong)
 	cin >> choice1 ;
 
 	if ( choice1 == 'n' || choice1 == 'N' )
 	{
-		charge_density = Cdensity();  		
+		charge_density = Cdensity();
 	}
 
 	else if ( choice1 == 'y' || choice1 == 'Y' )
@@ -784,10 +785,10 @@ void vohm()  	//Vector form of ohm's law
 		cout<< " Wrong Input \n > " ;
 		goto z;
 	}
-	
+
 	electric_field = charge_density*resistivity ;
 	cout << " Electric Field = " << electric_field << " V/m" << endl;
- 
+
 }
 
 void G() 	// conductance
@@ -795,14 +796,14 @@ void G() 	// conductance
 {
 	double conductance , resistance ;
 	char choice ;
-	
+
 	cout << " Do you know the value of Resistance (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		resistance = R();  
+		resistance = R();
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -816,10 +817,10 @@ void G() 	// conductance
 		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
-	
+
 	conductance = 1/resistance ;
 	cout << " Conductance = " << conductance << " S" << endl ; // unit is seimen or ohm(inverse)
-	
+
 }
 
 
@@ -828,14 +829,14 @@ void cndct() 	// conductivity
 {
 	double conductivity,resistivity ;
 	char choice ;
-	
+
 	cout << " Do you know the value of Resistivity (y/n) \n > " ;
 	x:  	// x is to repeatly type answer (if wrong)
 	cin >> choice ;
 
 	if ( choice == 'n' || choice == 'N' )
 	{
-		resistivity = rst();  
+		resistivity = rst();
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
@@ -852,7 +853,7 @@ void cndct() 	// conductivity
 
 	conductivity = 1/resistivity ;
 	cout << " Conductivity = " << conductivity << " S/m" << endl ; // unit is seimen/metre or ohm(inverse) metre(inverse)
-	
+
 }
 
 
@@ -861,7 +862,7 @@ void codetocolor() 		// Convert Color Code to Code
 {
 	int i , j , digit[4];
 	string first_color, second_color, third_color, fourth_color ;
-	
+
 	const char* color[] = {
 			 "\033[1;30m Black ",
 			 "\033[1;33m Brown ",
@@ -873,13 +874,13 @@ void codetocolor() 		// Convert Color Code to Code
 			 "\033[1;35m Violet ",
 			 "\033[1;30m Grey ",
 			 "\033[1;37m White "};	 // Color codes included
-	
+
 	const char* tolore[] = {
 		"\033[1;33m Gold ",
 		"\033[1;37m Silver " };
-	
+
 	char reset[] = "\033[0m";
-	
+
 	cout << " Enter the First Number (10's place) : " ; 	//first digit
 	cin >> digit[0] ;
 	cout << " Enter the Second Number (1's place) : " ; 	//second digit
@@ -888,7 +889,7 @@ void codetocolor() 		// Convert Color Code to Code
 	cin >> digit[2] ;
 	cout << " Enter the Tolerance (only digit) : " ; 	// It will be in the Form ( + or - number % )
 	cin >> digit[3] ;
-	
+
 	for( i=0 ; i<=3 ; i++ )
 	{
 		for( j=0 ; j<10 ; j++ )
@@ -913,7 +914,7 @@ void codetocolor() 		// Convert Color Code to Code
 				{
 					third_color = color[j] ;
 				}
-			}	
+			}
 			else if( i == 3 )
 			{
 				if( digit[i] == 5 )
@@ -929,7 +930,7 @@ void codetocolor() 		// Convert Color Code to Code
 	}
 	cout << first_color << '\t' << second_color << '\t' << third_color << '\t' << fourth_color << endl ;
 	cout << " 10's " << '\t' << " 1's " << '\t' << " Power " << '\t' << " Tolerance " << reset <<endl ;
-	 
+
 }
 
 void colortocode () 		// Convert Color Code to Code
@@ -937,44 +938,49 @@ void colortocode () 		// Convert Color Code to Code
 {
 	int i , j ;
 	const char* color[] = {
-			 " Black ",
-	       	 " Brown ",
-		 	 " Red ",
-			 " Orange ",
-			 " Yellow ",
-			 " Green ",
-			 " Blue ",
-			 " Violet ",
-			 " Grey ",
-			 " White "};
+			 "Black",
+	     "Brown",
+		 	 "Red",
+			 "Orange",
+			 "Yellow",
+			 "Green",
+			 "Blue",
+			 "Violet",
+			 "Grey",
+			 "White"};
 	const char* tolore[] = {
-		" Gold ",
-		" Silver " };
-	
-	
+		"Gold",
+		"Silver" };
+
+
 	int first_number, second_number, third_number, fourth_number ;
 	char choice ;
-	string colour[4] ;
-	
+	string input;
+	vector<string>colours;
+
 	cout << " Enter the First Colour (1st Band) : " ; 	//first digit
-	cin >> colour[0] ;
+	cin >> input;
+	colours.push_back(input);
 	cout << " Enter the Second Colour (2nd Band) : " ; 	//second digit
-	cin >> colour[1] ;
+	cin >> input;
+	colours.push_back(input);
 	cout << " Enter the Third Colour (3rd Band) : " ; 	//10 raised to?
-	cin >> colour[2] ;
+	cin >> input;
+	colours.push_back(input);
 	cout << " Does it have Colour (y/n) " ;
 	x:
 	cin >> choice ;
-	
+
 	if ( choice == 'n' || choice == 'N' )
 	{
-		fourth_number = 20 ;  
+		fourth_number = 20 ;
 	}
 
 	else if ( choice == 'y' || choice == 'Y' )
 	{
-		cout << " Enter the Fourth Colour : " ; 
-		cin >> colour[3] ;
+		cout << " Enter the Fourth Colour : " ;
+		cin >> input;
+		colours.push_back(input);
 	}
 
 	else
@@ -982,39 +988,39 @@ void colortocode () 		// Convert Color Code to Code
 		cout<< " Wrong Input \n > " ;
 		goto x;
 	}
-	
+
 	for( i=0 ; i<=3 ; i++ )
 	{
 		for( j=0 ; j<10 ; j++ )
 		{
 			if( i == 0 )
 			{
-				if( colour[i] == color[j] )
+				if( colours.at(i) == color[j] )
 				{
 					first_number = j ;
 				}
 			}
 			else if( i == 1 )
 			{
-				if( colour[i] == color[j] )
+				if( colours.at(i) == color[j] )
 				{
 					second_number = j ;
 				}
 			}
 			else if( i == 2 )
 			{
-				if( colour[i] == color[j] )
+				if( colours.at(i) == color[j] )
 				{
 					third_number = j ;
 				}
-			}	
+			}
 			else if( i == 3 )
 			{
-				if( colour[i] == tolore[0] )
+				if( colours.at(i) == tolore[0] )
 				{
 					fourth_number = 5 ;
 				}
-				else if(colour[i] == tolore[1])
+				else if(colours.at(i) == tolore[1])
 				{
 					fourth_number = 10 ;
 				}
@@ -1022,7 +1028,7 @@ void colortocode () 		// Convert Color Code to Code
 		}
 	}
 	cout << first_number << second_number << " x 10^" << third_number << " +- " << fourth_number << "%" << endl ;
-	 
+
 }
 
 
