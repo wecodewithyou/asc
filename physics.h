@@ -1032,6 +1032,32 @@ void colortocode () 		// Convert Color Code to Code
 }
 
 
+void ReqS() 		// Effective Resistance (Series Connection)
+{
+	double r1 , rn[20] , resistance ,total;
+	int i;
+	
+	cout << " Enter Total Number of Resistance : " ;
+	cin >> total ;
+	
+	cout << " Enter First Resistance : " ;
+	cin >> r1;
+	
+	for (i=0 ; i<total ; i++)
+	{
+		cout << " Enter next Resistance : " ;
+		cin >> rn[i];
+	}
+	
+	resistance =r1;
+	
+	for (i=0 ; i<total ; i++)
+	{
+		resistance = resistance + rn[i];
+	}
+	
+	cout << " Resistance = " << resistance << " ohm" ;
+}
 
 
 #endif
