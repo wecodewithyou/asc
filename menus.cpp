@@ -220,6 +220,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 11.Find color of bands of Resistor " << endl; 
         cout << " 12.Find Resistance of bands of a Resistor " << endl; 
         cout << " 13.Total Resistance in Series Connection " << endl ;
+        cout << " 14.Find E.M.F of Cell " << endl;
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
@@ -251,6 +252,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			colortocode(); // resistance of bands
 		else if(o == 13)
 			ReqS();
+		else if(o == 14)
+			Emf();
         else
             cout << alert << " Invalid option please try again " << endl;
     }
