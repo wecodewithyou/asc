@@ -939,7 +939,7 @@ void colortocode () 		// Convert Color Code to Code
 	int i , j ;
 	const char* color[] = {
 			 "Black",
-	     "Brown",
+			 "Brown",
 		 	 "Red",
 			 "Orange",
 			 "Yellow",
@@ -1057,6 +1057,46 @@ void ReqS() 		// Effective Resistance (Series Connection)
 	}
 	
 	cout << " Resistance = " << resistance << " ohm" ;
+}
+
+
+void Emf()
+
+{
+	
+	double emf, potential_difference , current , internal_resistance;
+	char choice1;
+	
+	cout << "Enter the Internal resistance : " ;
+	cin >> internal_resistance;
+	
+	cout << " Do you know the value of Current (y/n) \n > " ;
+	x:  	// x is to repeatly type answer (if wrong)
+	cin >> choice1 ;
+
+	if ( choice1 == 'n' || choice1 == 'N' )
+	{
+		current = I();
+	}
+
+	else if ( choice1 == 'y' || choice1 == 'Y' )
+	{
+		cout << " Enter the Value of Current : " ;
+		cin >> current ;
+	}
+
+	else
+	{
+		cout<< " Wrong Input \n > " ;
+		goto x;
+	}
+	
+	cout << " Enter the Potential Difference : ";
+	cin >> potential_difference;
+	
+	emf = potential_difference + current * internal_resistance;
+
+	cout << " EMF of Cell = " << emf ;
 }
 
 
