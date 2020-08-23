@@ -24,9 +24,9 @@ sub_menu sb;
 sub_menu::problems_menu pb; // Intializing variable to the subclass
 
 const string alert = "\033[1;31m"; // red color
-const string success = "\033[;32m"; // green color
-const string info = "\033[34m"; // blue color
-const string yellow = "\033[33m";
+const string success = "\033[1;32m"; // green color
+const string info = "\033[1;34m"; // blue color
+const string yellow = "\033[1;33m";
 const string clear_color = "\033[0m";
 
 void main_menu()
@@ -103,6 +103,7 @@ void sub_menu::sub_menu_chemistry()
     int op;
     cout << "\n CHAPTER MENU:- " << endl;
     cout << " 1. Solid States " << endl;
+    cout << " 4. Chemical Kinetics " << endl;
     cout << " 0. Back to Main Menu " << endl;
     cout << " Enter a Option : ";
     cin >> op;
@@ -111,11 +112,14 @@ void sub_menu::sub_menu_chemistry()
 	    case 0:
 	       main_menu();
 	       break;
-      case 1:
-         pb.chemistry(1);
-         break;
-      default:
-         cout << alert << "\n Invalid option please try again "<< endl;
+        case 1:
+            pb.chemistry(1);
+            break;
+        case 4:
+            pb.chemistry(4);
+            break;
+        default:
+            cout << alert << "\n Invalid option please try again "<< endl;
     }
 }
 
@@ -287,6 +291,25 @@ void sub_menu::problems_menu::chemistry(int chapter)
           no_of_atoms();
         else
           cout << alert << "\n Invalid option please try again " << endl;
+    }
+    else if(chapter == 4)
+    {
+        cout << " 1. Order of reaction " << endl;
+        cout << " 2. t1/n life of first order reaction " << endl;
+        cout << " 3. Activation Energy " << endl;
+        cout << " 0. Back to Chapter Menu " << endl;
+        cout << " Enter a Option : ";
+        cin >> o;
+        if(o == 0)
+            sb.sub_menu_chemistry();
+        else if(o == 1)
+            order_of_reaction();
+        else if(o == 2)
+            life_of_first_order();
+        else if(o == 3)
+            activation_energy();
+        else
+            cout << alert << "\n Invalid option please try again " << endl;
     }
     cout << "\n Do you want to continue the program (y/n) > ";
     cin >> ch;

@@ -7,6 +7,9 @@
 using namespace std;
 
 const double NA = 6.022e23;
+const double RG = 8.314; // Gas Constant
+
+// CHAPTER 1
 
 double density()
 {
@@ -78,6 +81,47 @@ void no_of_atoms()
   no_in_mass = z * tot_no;
   cout << " Total number of atoms in " << mass << "g = " << no_in_mass << endl;
   cout << " Total number of atoms = " << tot_no << endl;
+}
+
+
+// CHAPTER 4
+
+void order_of_reaction()
+{
+    double p1,p2;
+    cout << "\n Order Of Reaction:- " << endl;
+    cout << " Enter the power of first reactant : ";
+    cin >> p1;
+    cout << " Enter the power of second reactand : ";
+    cin >> p2;
+    cout << " Order = " << p1+p2 << endl;
+}
+
+void life_of_first_order()
+{
+    double t,K;
+    cout << "\n t1/n life of first order reaction:- " << endl;
+    cout << " Enter the time life to find : ";
+    cin >> t;
+    cout << " Enter the value of reaction constant (K) : ";
+    cin >> K;
+    cout << " t period = " << (2.303/K) * log10(1/1-t) << endl;
+}
+
+void activation_energy()
+{
+    double Ea , T1, T2, K1, K2;
+    cout << "\n Activation Energy :- " << endl;
+    cout << " Enter T1 : ";
+    cin >> T1;
+    cout << " Enter T2 : ";
+    cin >> T2;
+    cout << " Enter K1 : ";
+    cin >> K1;
+    cout << " Enter K2 : ";
+    cin >> K2;
+    Ea = ((2.303*RG*T1*T2)/(T2-T1)) * log10(K2/K1);
+    cout << " Activation Energy = " << round(Ea) << " J/mol" << endl;
 }
 
 #endif
