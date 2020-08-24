@@ -1060,6 +1060,47 @@ void ReqS() 		// Effective Resistance (Series Connection)
 }
 
 
+void ReqP() 		// Effective Resistance (Series Connection)
+{
+	double r1 , rn[20] , resistance ;
+	int i, total ;
+	
+	z:
+	cout << " \n Enter Total Number of Resistance (2 or 3) : " ;
+	cin >> total ;
+	
+	if ( total > 3 || total < 1 )
+	{
+		goto z;
+	}
+	
+	cout << " Enter First Resistance : " ;
+	cin >> r1;
+	
+	for (i=0 ; i<total ; i++)
+	{
+		cout << " Enter next Resistance : " ;
+		cin >> rn[i];
+	}
+	
+	resistance =r1;
+	
+	
+		if( total == 1)
+			resistance = r1 ;
+		else if ( total == 2 )
+			resistance = rn[0]*r1 ;
+		else
+		{
+			double denometer ;
+			denometer = ( r1*rn[0] + rn[0]*rn[1] + rn[1]*r1 ) ;
+			resistance = (resistance *rn[0]* rn[1] )/denometer ;
+		}
+	
+	cout << " Resistance = " << resistance << " ohm" ;
+}
+
+
 void Emf()
 
 {
