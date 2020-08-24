@@ -224,7 +224,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 11.Find color of bands of Resistor " << endl; 
         cout << " 12.Find Resistance of bands of a Resistor " << endl; 
         cout << " 13.Total Resistance in Series Connection " << endl ;
-        cout << " 14.Find E.M.F of Cell " << endl;
+        cout << " 14.Total Resistance in Parallel Connection " << endl ;        
+        cout << " 15.Find E.M.F of Cell " << endl;
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
