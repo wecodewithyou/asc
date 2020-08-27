@@ -1,8 +1,8 @@
-asc: main.o
-	g++ -o asc main.o
+windows:
+	g++ -static main.cpp -o asc
 
-main.o: main.cpp
-	g++ -c main.cpp 
+linux:  
+	g++ main.cpp -o asc 
 
 clean:
-	rm -f main.o asc.* 
+	rm -f asc.* 
