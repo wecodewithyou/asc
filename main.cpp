@@ -38,7 +38,7 @@ void banner()
 
                 GITHUB:https://www.github.com/wecodewithyou
                 CONTACT INFO:wecodewithyou2020@protonmail.com
-                DEVS:Mr.Unkn0wn,Ph0en1x
+                DEVS:Mr.Unkn0wn,Ph0en1x,Sp3ctr3
                 WEBSITE:https://sancoders.sanbots.repl.co
                 PROJECT WEBSITE:https://asc.sanbots.repl.co
 

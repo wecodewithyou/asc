@@ -128,6 +128,7 @@ void sub_menu::sub_menu_csc()
   cout << "\n CHAPTER MENU:- " << endl;
   int o;
   cout << " 1. Structures and Pointers " << endl;
+  cout << " 3. Data Structures " << endl; 
   cout << " 0. Back to Main Menu " << endl;
   cout << " Enter the option : ";
   cin >> o;
@@ -137,6 +138,9 @@ void sub_menu::sub_menu_csc()
           main_menu();
     case 1:
           pb.csc(1);
+          break;
+    case 3:
+          pb.csc(3);
           break;
     default:
           cout << alert << "\n Invalid option please try again " << endl;
@@ -335,6 +339,23 @@ void sub_menu::problems_menu::csc(int chapter)
           marklist();
       else
           cout << alert << "\n Invalid option please try again " << endl;
+     }
+     else if(chapter == 3)
+     {
+        int o;
+        cout << " 1. Stacks Representation " << endl;
+        cout << " 2. Queue Representation " << endl;
+        cout << " 0. Back to Chapter Menu " << endl;
+        cout << " Enter a Option : ";
+        cin >> o;
+        if(o == 0)
+            sb.sub_menu_csc();
+        else if(o == 1)
+            stack_representation();
+        else if(o == 2)
+            queue_representation();
+        else
+            cout << alert << "\n Invalid option please try again " << endl;
      }
      cout << "\n Do you want to continue the program (y/n) > ";
      cin >> ch;
