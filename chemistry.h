@@ -6,10 +6,14 @@
 
 using namespace std;
 
-const double NA = 6.022e23;
+const double NA = 6.022e23; // Avogadro's Number
 const double RG = 8.314; // Gas Constant
 
+
+
 // CHAPTER 1
+
+
 
 double density()
 {
@@ -84,7 +88,83 @@ void no_of_atoms()
 }
 
 
+
+// CHAPTER 2
+
+
+
+void mass_percentage()
+{
+  float mass, tot_mass, percent;
+  cout << "\n Enter the mass of the component : " << endl;
+  cin >> mass;
+  cout << "Enter the total mass of the solution : " << endl;
+  cin >> tot_mass;
+  percent = mass/tot_mass*100;
+  cout << "Mass percentage = " << percent << endl;
+}
+
+void volume_percentage()
+{
+  float vol, tot_vol, percent;
+  cout << "\n Enter the volume of the component : " << endl;
+  cin >> vol;
+  cout << "Enter the total volume of the solution : " << endl;
+  cin >> tot_vol;
+  percent = vol/tot_vol*100;
+  cout << "Volume percentage = " << percent << endl;
+}
+
+void mass_by_volume_percentage()
+{
+  float mass, tot_vol, percent;
+  cout << "\n Enter the mass of the component : " << endl;
+  cin >> mass;
+  cout << "Enter the total volume of the solution : " << endl;
+  cin >> tot_vol;
+  percent = mass/tot_vol*100;
+  cout << "Mass by volume percentage = " << percent << endl;
+}
+
+void mole_fraction()
+{
+  float xa, xb, na, nb;
+  cout << "\n Enter the number of moles of solvent : " << endl;
+  cin >> na;
+  cout << "Enter the number of moles of solute : " << endl;
+  cin >> nb;
+  xa = na/(na+nb);
+  xb = 1-xb;
+  cout << " Mole fraction of solute = " << xa << "\n Mole fraction of solvent = " << xb << endl;
+}
+
+void ppm() // Parts per million
+{
+  float ppm, ppm1, tot_parts;
+  cout << "\n Enter the no. of parts of the component : " << endl;
+  cin >> ppm1;
+  cout << "Enter the total no. of parts of the solution : " << endl;
+  cin >> tot_parts;
+  ppm = ppm1/tot_parts*1000000;
+  cout << "Parts per million = " << ppm << endl;
+}
+
+void molarity()
+{
+  float m, nb, v;
+  cout << "\n Enter the no. of moles of the solute : " << endl;
+  cin >> nb;
+  cout << "Enter the volume of solution in ml : " << endl;
+  cin >> v;
+  m = nb/v*1000;
+  cout << "Molarity = " << m << endl;
+}
+
+
+
 // CHAPTER 4
+
+
 
 void order_of_reaction()
 {
