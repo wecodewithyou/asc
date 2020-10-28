@@ -103,6 +103,7 @@ void sub_menu::sub_menu_chemistry()
     int op;
     cout << "\n CHAPTER MENU:- " << endl;
     cout << " 1. Solid States " << endl;
+    cout << " 2. Solutions " << endl;
     cout << " 4. Chemical Kinetics " << endl;
     cout << " 0. Back to Main Menu " << endl;
     cout << " Enter a Option : ";
@@ -114,6 +115,9 @@ void sub_menu::sub_menu_chemistry()
 	       break;
         case 1:
             pb.chemistry(1);
+            break;
+        case 2:
+            pb.chemistry(2);
             break;
         case 4:
             pb.chemistry(4);
@@ -284,11 +288,11 @@ void sub_menu::problems_menu::chemistry(int chapter)
         cout << " 2. Calculate atomic mass of a element " << endl;
         cout << " 3. Total number of atoms " << endl;
         cout << " 0. Back to Chapter Menu " << endl;
-	      cout << " Enter a Option : ";
+	    cout << " Enter a Option : ";
         cin >> o;
-	      if(o == 0)
+	    if(o == 0)
 	        sb.sub_menu_chemistry();
-	      else if(o == 1)
+	    else if(o == 1)
           density(); // Density of the unit cell
         else if(o == 2)
           atomic_mass();
@@ -296,6 +300,34 @@ void sub_menu::problems_menu::chemistry(int chapter)
           no_of_atoms();
         else
           cout << alert << "\n Invalid option please try again " << endl;
+    }
+    else if(chapter == 2)
+    {
+        cout << " 1. Mass Percentage " << endl;
+        cout << " 2. Volume Percentage " << endl;
+        cout << " 3. Mass by Volume Percentage " << endl;
+        cout << " 4. Mole Fraction " << endl;
+        cout << " 5. PPM " << endl;
+        cout << " 6. Molarity " << endl;
+        cout << " 0. Back to Chapter Menu " << endl;
+        cout << " Enter a Option : ";
+        cin >> o;
+        if(o == 0)
+            sb.sub_menu_chemistry();
+        else if(o == 1)
+            mass_percentage();
+        else if(o == 2)
+            volume_percentage();
+        else if(o == 3)
+            mass_by_volume_percentage();
+        else if(o == 4)
+            mole_fraction();
+        else if(o == 5)
+            ppm();
+        else if(o == 6)
+            molarity();
+        else
+            cout << alert << "\n Invalid option please try again " << endl;
     }
     else if(chapter == 4)
     {
