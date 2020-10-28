@@ -96,9 +96,9 @@ void no_of_atoms()
 void mass_percentage()
 {
   float mass, tot_mass, percent;
-  cout << "\n Enter the mass of the component : " << endl;
+  cout << "\n Enter the mass of the component : ";
   cin >> mass;
-  cout << "Enter the total mass of the solution : " << endl;
+  cout << "Enter the total mass of the solution : ";
   cin >> tot_mass;
   percent = mass/tot_mass*100;
   cout << "Mass percentage = " << percent << endl;
@@ -107,9 +107,9 @@ void mass_percentage()
 void volume_percentage()
 {
   float vol, tot_vol, percent;
-  cout << "\n Enter the volume of the component : " << endl;
+  cout << "\n Enter the volume of the component : ";
   cin >> vol;
-  cout << "Enter the total volume of the solution : " << endl;
+  cout << "Enter the total volume of the solution : ";
   cin >> tot_vol;
   percent = vol/tot_vol*100;
   cout << "Volume percentage = " << percent << endl;
@@ -118,9 +118,9 @@ void volume_percentage()
 void mass_by_volume_percentage()
 {
   float mass, tot_vol, percent;
-  cout << "\n Enter the mass of the component : " << endl;
+  cout << "\n Enter the mass of the component : ";
   cin >> mass;
-  cout << "Enter the total volume of the solution : " << endl;
+  cout << "Enter the total volume of the solution : ";
   cin >> tot_vol;
   percent = mass/tot_vol*100;
   cout << "Mass by volume percentage = " << percent << endl;
@@ -129,9 +129,9 @@ void mass_by_volume_percentage()
 void mole_fraction()
 {
   float xa, xb, na, nb;
-  cout << "\n Enter the number of moles of solvent : " << endl;
+  cout << "\n Enter the number of moles of solvent : ";
   cin >> na;
-  cout << "Enter the number of moles of solute : " << endl;
+  cout << "Enter the number of moles of solute : ";
   cin >> nb;
   xa = na/(na+nb);
   xb = 1-xb;
@@ -141,9 +141,9 @@ void mole_fraction()
 void ppm() // Parts per million
 {
   float ppm, ppm1, tot_parts;
-  cout << "\n Enter the no. of parts of the component : " << endl;
+  cout << "\n Enter the no. of parts of the component : ";
   cin >> ppm1;
-  cout << "Enter the total no. of parts of the solution : " << endl;
+  cout << "Enter the total no. of parts of the solution : ";
   cin >> tot_parts;
   ppm = ppm1/tot_parts*1000000;
   cout << "Parts per million = " << ppm << endl;
@@ -152,9 +152,9 @@ void ppm() // Parts per million
 void molarity()
 {
   float m, nb, v;
-  cout << "\n Enter the no. of moles of the solute : " << endl;
+  cout << "\n Enter the no. of moles of the solute : ";
   cin >> nb;
-  cout << "Enter the volume of solution in ml : " << endl;
+  cout << "Enter the volume of solution in ml : ";
   cin >> v;
   m = nb/v*1000;
   cout << "Molarity = " << m << endl;
