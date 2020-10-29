@@ -857,7 +857,7 @@ void cndct() 	// conductivity
 }
 
 
-void codetocolor() 		// Convert Color Code to Code
+void codetocolor() 		// Convert Code to Color
 
 {
 	int i , j , digit[4];
@@ -933,7 +933,7 @@ void codetocolor() 		// Convert Color Code to Code
 
 }
 
-void colortocode () 		// Convert Color Code to Code
+void colortocode () 		// Convert Color_Code to Code
 
 {
 	int i , j ;
