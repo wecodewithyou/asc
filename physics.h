@@ -1060,7 +1060,7 @@ void ReqS() 		// Effective Resistance (Series Connection)
 }
 
 
-void ReqP() 		// Effective Resistance (Series Connection)
+void ReqP() 		// Effective Resistance (Parallel Connection)
 {
 	double r1 , rn[20] , resistance ;
 	int i, total ;
@@ -1138,7 +1138,26 @@ void Emf()
 	emf = potential_difference + current * internal_resistance;
 
 	cout << " EMF of Cell = " << emf ;
+
 }
 
+
+void MBridge_R() 		// Metre Bridge Unknown Resistance
+
+{
+	
+	float resistance , unknown_resistance , length ;
+	
+	cout << " Enter the Known Resistance : "; 
+	cin >> resistance ;
+	
+	cout << " Enter the Length (l) : " ;
+	cin >> length ;
+	
+	unknown_resistance = resistance* length / (100-length) ;
+	
+	cout << " Unknown Resistance = " << unknown resistance ;
+	
+}
 
 #endif
