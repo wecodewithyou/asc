@@ -1156,7 +1156,7 @@ void MBridge_R() 		// Metre Bridge Unknown Resistance
 	
 	unknown_resistance = resistance* length / (100-length) ;
 	
-	cout << " Unknown Resistance = " << unknown resistance ;
+	cout << " Unknown Resistance = " << unknown_resistance ;
 	
 }
 
