@@ -14,13 +14,6 @@ struct student
    int ce,pe,te;
 };
 
-// Linked List 
-struct node
-{
-   char data[10];
-   node *next;
-};
-
 // Stacks Representation 
 class stack
 {
@@ -47,12 +40,6 @@ class queue
       void insert(int que[], int val);
       void deletion(int que[]);
       void show_queue(int que[]);
-};
-
-class linked_list
-{
-   private:
-      node *head, *tail;
 };
 
 // STACKS
@@ -151,6 +138,8 @@ void queue::show_queue(int que[])
    cout << " Rear of the queue = " << que[rear] << endl;
 }
 
+// CHAPTER 3
+
 void stack_representation()
 {
    stack mystack(10);
@@ -190,6 +179,8 @@ void queue_representation()
    cout << " Delete 2 elements :- ";
    myqueue.show_queue(data);
 }
+
+// CHAPTER 1
 
 void marklist( )
 {
