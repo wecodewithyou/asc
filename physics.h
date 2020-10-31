@@ -1156,7 +1156,7 @@ void MBridge_R() 		// Metre Bridge Unknown Resistance
 	
 	unknown_resistance = resistance* length / (100-length) ;
 	
-	cout << " Unknown Resistance = " << unknown_resistance << ' ohm';
+	cout << " Unknown Resistance = " << unknown_resistance << " ohm";
 	
 }
 
@@ -1178,7 +1178,7 @@ void potentioM_emf() 		// Potentiometre Unknown EMF
 	
 	unknown_emf = emf * length2/length1 ;
 	
-	cout << " Unknown EMF = " << unknown_emf << ' V';
+	cout << " Unknown EMF = " << unknown_emf << " V";
 	
 }
 
