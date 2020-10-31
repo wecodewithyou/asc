@@ -235,6 +235,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 14.Total Resistance in Parallel Connection " << endl ;        
         cout << " 15.Find E.M.F of Cell " << endl;
         cout << " 16.Find Unknown Resistance in a Metre Bridge " << endl ;
+        cout << " 17.Find Unknown EMF in Potentiometre " << endl ;
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
@@ -272,6 +273,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			Emf();		// Emf of Cell (using simple eqn
 		else if(o == 16)
 			MBridge_R();	// Unknown Resistance in metre bridge
+		else if(o == 17)
+			potentioM_emf();
         else
             cout << alert << " Invalid option please try again " << endl;
     }
