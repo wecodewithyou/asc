@@ -1183,4 +1183,27 @@ void potentioM_emf() 		// Potentiometre Unknown EMF
 }
 
 
+void inter_resist_cell() 		// Internal Resistance of a Cell
+
+{
+	
+	float internal_resistance , resistance , length1 , length2 ;
+	
+	cout << " Enter the Resistance : "; 
+	cin >> resistance ;
+	
+	cout << " Enter Balancing Length (l1) of Cell : " ;
+	cin >> length1 ;
+	
+	cout << " Enter Balancing Length (l2) of Both Cell and Resistor : " ;
+	cin >> length2 ;
+	
+	internal_resistance = (length1/length2 -1) * resistance ;
+	
+	cout << " Internal Resistance = " << internal_resistance << " ohm";
+	
+}
+
+
+
 #endif
