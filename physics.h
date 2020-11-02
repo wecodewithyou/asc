@@ -1205,5 +1205,22 @@ void inter_resist_cell() 		// Internal Resistance of a Cell
 }
 
 
+void poten_gradient()	 	// Potential Gradient (sensitivity of Potentiometre)
+
+{
+	
+	float potential_gradient , length , voltage ;
+	
+	cout << " Enter the Voltage : " ;
+	cin >> voltage ;
+	
+	cout << " Enter the Length : " ;
+	cin >> length ;
+	
+	potential_gradient = voltage / length ;
+	cout << " Potential Gradient (K) = " << potential_gradient << " v/m"
+	
+}
+
 
 #endif

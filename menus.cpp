@@ -237,6 +237,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         cout << " 16.Find Unknown Resistance in a Metre Bridge " << endl ;
         cout << " 17.Find Unknown EMF in Potentiometre " << endl ;
         cout << " 18.Find Internal Resistance of a Cell using Potentiometre " << endl ;
+        cout << " 19.Find Potential Gradient of a Potentiometre " << endl ;
         cout << " 0. Back to chapter menu " << endl;
         cout << " Enter a Option : ";
         cin >> o;
@@ -278,6 +279,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			potentioM_emf(); 	// EMF of Cell Using Potentiometre
 		else if(o == 18)
 			inter_resist_cell(); 	// Internal Resistance of a Cell Using Potentiometre
+		else if(o == 19)
+			poten_gradient(); 		// Potential Gradient (sensitivity of potentiometre
         else
             cout << alert << " Invalid option please try again " << endl;
     }
