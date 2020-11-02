@@ -1218,7 +1218,7 @@ void poten_gradient()	 	// Potential Gradient (sensitivity of Potentiometre)
 	cin >> length ;
 	
 	potential_gradient = voltage / length ;
-	cout << " Potential Gradient (K) = " << potential_gradient << " v/m"
+	cout << " Potential Gradient (K) = " << potential_gradient << " v/m" ;
 	
 }
 
