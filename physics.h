@@ -1223,4 +1223,84 @@ void poten_gradient()	 	// Potential Gradient (sensitivity of Potentiometre)
 }
 
 
+void Elect_Pow() 	// Electric Power
+
+{
+	
+	// float power , current , resistance  ;
+	int option , time_taken; 
+	float power , work , voltage , charge , current , resistance ;
+	
+	cout << " Which way do you prefer : " << endl ;
+	
+	repeat :
+	
+	cout << " \n 1.Work & Time \n 2.Voltage , Charge & Time \n 3.Voltage & Current \n 4.Current & Resistance \n 5.Voltage & Resistance  " ;
+	cin >> option ;
+	
+	switch (option)
+	{
+		case 1:
+			
+			cout << " Enter the Work Done " ;
+			cin >> work ;
+			cout << " Enter the Time Taken " ;
+			cin >> time_taken ;
+			
+			power = work / time_taken ;
+			
+			break ;
+		
+		case 2 :
+			
+			cout << " Enter the Voltage & Charge : " ;
+			cin >> voltage >> charge ;
+			cout << " Enter the Time Taken : " ;
+			cin >> time_taken ;
+			
+			power = voltage * charge / time_taken ;
+			
+			break ;
+			
+		case 3 :
+			
+			cout << " Enter Voltage & Current : " ;
+			cin >> voltage >> current ;
+			
+			power = voltage * current ;
+			
+			break ;
+		
+		case 4 :
+			
+			cout << " Enter the Current & Resistance : " ;
+			cin >> current >> resistance ;
+			
+			power = current* current * resistance ;
+			
+			break ;
+			
+		case 5 :
+			
+			cout << " Enter the Voltage & Resistance : " ;
+			cin >> voltage >> resistance ;
+			
+			power = voltage* voltage / resistance ;
+			
+			break ;
+			
+		default :
+		
+			cout << " Wrong Input " ;
+			goto repeat ;
+		
+	}
+	
+	cout << " Power = " << power << " W" << endl ;
+	
+}
+	
+	
+
+
 #endif
