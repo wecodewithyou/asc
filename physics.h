@@ -1231,7 +1231,7 @@ void Elect_Pow() 	// Electric Power
 	int option , time_taken; 
 	float power , work , voltage , charge , current , resistance ;
 	
-	cout << " Which way do you prefer : " << endl ;
+	cout << " \n \n Which way do you prefer : " << endl ;
 	
 	repeat :
 	
@@ -1253,8 +1253,10 @@ void Elect_Pow() 	// Electric Power
 		
 		case 2 :
 			
-			cout << " Enter the Voltage & Charge : " ;
-			cin >> voltage >> charge ;
+			cout << " Enter the Voltage : " ;
+			cin >> voltage ;
+			cout << " Enter the Charge : " ;
+			cin >> charge ;
 			cout << " Enter the Time Taken : " ;
 			cin >> time_taken ;
 			
@@ -1264,8 +1266,10 @@ void Elect_Pow() 	// Electric Power
 			
 		case 3 :
 			
-			cout << " Enter Voltage & Current : " ;
-			cin >> voltage >> current ;
+			cout << " Enter the Voltage : " ;
+			cin >> voltage ;
+			cout << " Enter the Current : " ;
+			cin >> current ;
 			
 			power = voltage * current ;
 			
@@ -1273,8 +1277,10 @@ void Elect_Pow() 	// Electric Power
 		
 		case 4 :
 			
-			cout << " Enter the Current & Resistance : " ;
-			cin >> current >> resistance ;
+			cout << " Enter the Current : " ;
+			cin >> current ;
+			cout << " Enter the Resistance : " ;
+			cin >> resistance ;
 			
 			power = current* current * resistance ;
 			
@@ -1282,8 +1288,10 @@ void Elect_Pow() 	// Electric Power
 			
 		case 5 :
 			
-			cout << " Enter the Voltage & Resistance : " ;
-			cin >> voltage >> resistance ;
+			cout << " Enter the Voltage : " ;
+			cin >> voltage ;
+			cout << " Enter the Resistance : " ;
+			cin >> resistance ;
 			
 			power = voltage* voltage / resistance ;
 			
