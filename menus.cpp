@@ -60,7 +60,7 @@ void main_menu()
             cout << " Version : v0.1 pre-alpha build " << endl;
             cout << "\n Description : A simple all in one science subject"<<endl;
             cout <<"                problem solver for +2 Students " << endl;
-            cout << "               Developed by Mr. Unkn0wn , Ph0en1x and Spectr3 " << endl;
+            cout << "               Developed by Mr. Unkn0wn , Ph0en1x and Salman " << endl;
             cout << "\n Thank You For using our program <3 <3 <3 \n\n" << clear_color << endl;
             exit(0);
             break;
