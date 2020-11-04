@@ -40,8 +40,6 @@ void banner()
                 CONTACT INFO:wecodewithyou2020@protonmail.com
                 DEVS:Mr.Unkn0wn,Ph0en1x,Salman
                 WEBSITE:https://sancoders.sanbots.repl.co
-                PROJECT WEBSITE:https://asc.sanbots.repl.co
-
 		)";
 	cout << "\n";
 }
