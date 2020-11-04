@@ -1235,16 +1235,16 @@ void Elect_Pow() 	// Electric Power
 	
 	repeat :
 	
-	cout << " \n 1.Work & Time \n 2.Voltage , Charge & Time \n 3.Voltage & Current \n 4.Current & Resistance \n 5.Voltage & Resistance  " ;
+	cout << " \n 1.Work & Time \n 2.Voltage , Charge & Time \n 3.Voltage & Current \n 4.Current & Resistance \n 5.Voltage & Resistance \n Your Answer : " ;
 	cin >> option ;
 	
 	switch (option)
 	{
 		case 1:
 			
-			cout << " Enter the Work Done " ;
+			cout << " Enter the Work Done : " ;
 			cin >> work ;
-			cout << " Enter the Time Taken " ;
+			cout << " Enter the Time Taken : " ;
 			cin >> time_taken ;
 			
 			power = work / time_taken ;
@@ -1291,7 +1291,7 @@ void Elect_Pow() 	// Electric Power
 			
 		default :
 		
-			cout << " Wrong Input " ;
+			cout << "\n \n  Wrong Input  \n \n  " ;
 			goto repeat ;
 		
 	}
