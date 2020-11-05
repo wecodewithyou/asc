@@ -79,6 +79,7 @@ void sub_menu::sub_menu_physics() // Function inside a class
     cout << "\n CHAPTER MENU:- " << endl;
     cout << " 1. Electric Charges and Fields " << endl;
     cout << " 3. Current Electricity " << endl;
+    cout << " 4. Moving Charge & Magnetism " << endl ;
     cout << " 0. Back to Main Menu " << endl;
     cout << " Enter a Option : ";
     cin >> op;
@@ -93,6 +94,9 @@ void sub_menu::sub_menu_physics() // Function inside a class
        case 3:
             pb.physics(3);
             break;
+       case 4:
+			pb.physics(4);
+			break;
        default:
             cout << alert << "\n Invalid option please try again " << endl;
     }
@@ -287,6 +291,20 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
         else
             cout << alert << " Invalid option please try again " << endl;
     }
+    else if(chapter == 4)
+    {
+		cout << " 1. Magnetic Lorrentz Force " << endl ;
+		cout << " 0. Back to chapter menu " << endl ;
+		cout << " Enter a Option : ";
+        cin >> o;
+        if(o == 0)
+            sb.sub_menu_physics();
+        else if(o == 1)
+			m_lorrentz(); 	// Magnetic Lorrentz Force
+		else
+            cout << alert << " Invalid option please try again " << endl;
+        
+	}
     cout << "\n Do you want to continue the program (y/n) >  ";
     cin >> ch;
   }while(ch == 'y' || ch == 'Y');

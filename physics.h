@@ -1308,7 +1308,38 @@ void Elect_Pow() 	// Electric Power
 	
 }
 	
+					/*
+				  // Chapter 3 Finished \\
+
+
+						// Chapter 4 \\
+				   // Moving Charge & Magnetism \\
+										   		 */
+										   		 
+										   		 
+
+void m_lorrentz() 	// Magnetic Lorrentz Force
+
+{
 	
+	float magnetic_force , velocity , charge , magnetic_field ;
+	double angle ;
+	
+	cout << " Enter the Charge : " ;
+	cin >> charge ;
+	cout << " Enter the Velocity : " ;
+	cin >> velocity ;
+	cout << " Enter the Magnetic Flux Density (B) : " ;
+	cin >> magnetic_field ;
+	cout << " Enter the Angle b/w Velocity & Magnetic density in (Radian) : " ;
+	cin >> angle ;
+	
+	magnetic_force = charge * velocity * magnetic_field * sin(angle) ;
+	
+	cout << " Magnetic Force = " << magnetic_force << " N" << endl ;
+	
+}
+										   		
 
 
 #endif
