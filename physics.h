@@ -1339,7 +1339,35 @@ void m_lorrentz() 	// Magnetic Lorrentz Force
 	cout << " Magnetic Force = " << magnetic_force << " N" << endl ;
 	
 }
-										   		
+
+
+void lorrentz()
+
+{
+	float electric_field , electric_force , magnetic_force , velocity , charge , magnetic_field , lorrentz_force ;
+	double angle ;
+	
+	cout << " Enter the Electric Field : " ; 
+	cin >> electric_field ;	
+	cout << " Enter the Charge : " ;
+	cin >> charge ;	
+	
+	electric_force = charge * electric_field ;
+	
+	cout << " Enter the Velocity : " ;
+	cin >> velocity ;
+	cout << " Enter the Magnetic Flux Density (B) : " ;
+	cin >> magnetic_field ;
+	cout << " Enter the Angle b/w Velocity & Magnetic density in (Radian) : " ;
+	cin >> angle ;
+	
+	magnetic_force = charge * velocity * magnetic_field * sin(angle) ;
+	
+	lorrentz_force = electric_force + magnetic_force ;
+	
+	cout << " Total Lorrentz Force = " << lorrentz_force << " N" << endl ;			
+	
+}				   		
 
 
 #endif

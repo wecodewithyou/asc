@@ -294,6 +294,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
     else if(chapter == 4)
     {
 		cout << " 1. Magnetic Lorrentz Force " << endl ;
+		cout << " 2. Total Lorrentz Force " << endl ;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -301,6 +302,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
             sb.sub_menu_physics();
         else if(o == 1)
 			m_lorrentz(); 	// Magnetic Lorrentz Force
+		else if(o == 2)
+			lorrentz();		// Total Lorrentz Force
 		else
             cout << alert << " Invalid option please try again " << endl;
         
