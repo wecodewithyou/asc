@@ -1370,4 +1370,27 @@ void lorrentz()
 }				   		
 
 
+void E4r_m()		// Eqn for radius due to Magnetic Field
+
+{
+	float mass , velocity , charge , magnetic_field , radius ;
+	
+	cout << " Enter the Mass : " ;
+	cin >> mass ;
+	cout << " Enter the Velocity : " ;
+	cin >> velocity ;
+	cout << " Enter the Charge : " ;
+	cin >> charge ;
+	cout << " Enter the Magnetic Field (B) : " ;
+	cin >> magnetic_field ;
+	
+	radius = (mass * velocity) / (charge * magnetic_field) ;
+
+	cout << " Radius = " << radius << " m" << endl ;
+	
+}
+
+
+	
+
 #endif
