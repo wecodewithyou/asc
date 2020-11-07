@@ -296,6 +296,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 1. Magnetic Lorrentz Force " << endl ;
 		cout << " 2. Total Lorrentz Force " << endl ;
 		cout << " 3. Radius of Circular Path due to Perpendicular Magnetic Field " << endl ;
+		cout << " 4. Velocity Circular Path due to Perpendicular Magnetic Field " << endl ;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -305,8 +306,10 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			m_lorrentz(); 	// Magnetic Lorrentz Force
 		else if(o == 2)
 			lorrentz();		// Total Lorrentz Force
-		else if(o ==3)
+		else if(o == 3)
 			E4r_m();		// Eqn for radius due to Magnetic Field
+		else if(o == 4)
+			E4r_v(); 		// Eqn for Velocity due to Magnetic Field
 		else
             cout << alert << " Invalid option please try again " << endl;
         

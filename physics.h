@@ -1391,6 +1391,29 @@ void E4r_m()		// Eqn for radius due to Magnetic Field
 }
 
 
+void E4r_v()		// Eqn for velocity due to Magnetic Field
+
+{
+	float mass , velocity , charge , magnetic_field , radius ;
+	
+	cout << " Enter the Mass : " ;
+	cin >> mass ;
+	cout << " Enter the Radius : " ;
+	cin >> radius ;
+	cout << " Enter the Charge : " ;
+	cin >> charge ;
+	cout << " Enter the Magnetic Field (B) : " ;
+	cin >> magnetic_field ;
+	
+	velocity = (charge * magnetic_field * radius) / mass ;
+
+	cout << " Velocity = " << velocity << " m/s" << endl ;
+	
+}
+
+
+
+
 	
 
 #endif
