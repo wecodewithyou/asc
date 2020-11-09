@@ -11,6 +11,7 @@ using namespace std;
 const double e = 1.6e-19; 	// e is the charge of Proton or electrons
 const double k = 9e9;  // coulomb's law constant [ k = 1/4*pi*e0 ]
 const double e0 = 8.854e-12; 	// Electric Permitivity in free space
+const double pi = 3.14;
 
 						/*
 							// Chapter 1 \\
@@ -1391,7 +1392,7 @@ void E4r_m()		// Eqn for radius due to Magnetic Field
 }
 
 
-void E4r_v()		// Eqn for velocity due to Magnetic Field
+void E4v_m()		// Eqn for velocity due to Magnetic Field
 
 {
 	float mass , velocity , charge , magnetic_field , radius ;
@@ -1412,7 +1413,23 @@ void E4r_v()		// Eqn for velocity due to Magnetic Field
 }
 
 
+void t4circle_m() 	// Time Period of a Circular Motion due to Magnetic Field
 
+{
+	float time_period , mass , charge , magnetic_field ;
+	
+	cout << " Enter the Mass : " ;
+	cin >> mass ;
+	cout << " Enter the Charge : " ;
+	cin >> charge ;
+	cout << " Enter the Magnetic Field (B) : " ;
+	cin >> magnetic_field ;
+	
+	time_period = (2*pi * mass) / (charge * magnetic_field) ;
+	
+	cout << " Time Period = " << time_period << " s" << endl ;
+	
+}
 
 	
 
