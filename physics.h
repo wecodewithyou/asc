@@ -1446,7 +1446,7 @@ void f4circle_m() 	// Frequency of a Circular Motion due to Magnetic Field
 	
 	frequency = (charge * magnetic_field) / (2*pi * mass) ;
 	
-	cout << " Frequency = " << time_period << " s-1" << endl ;
+	cout << " Frequency = " << frequency << " s-1" << endl ;
 	
 }
 	
