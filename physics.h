@@ -1431,6 +1431,27 @@ void t4circle_m() 	// Time Period of a Circular Motion due to Magnetic Field
 	
 }
 
+
+void f4circle_m() 	// Frequency of a Circular Motion due to Magnetic Field
+
+{
+	float frequency , mass , charge , magnetic_field ;
+	
+	cout << " Enter the Mass : " ;
+	cin >> mass ;
+	cout << " Enter the Charge : " ;
+	cin >> charge ;
+	cout << " Enter the Magnetic Field (B) : " ;
+	cin >> magnetic_field ;
+	
+	frequency = (charge * magnetic_field) / (2*pi * mass) ;
+	
+	cout << " Frequency = " << time_period << " s-1" << endl ;
+	
+}
+	
+	
+	
 	
 
 #endif
