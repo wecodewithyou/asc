@@ -299,6 +299,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 4. Velocity Circular Path due to Perpendicular Magnetic Field " << endl ;
 		cout << " 5. Time Period of Circular Path due to Perpendicular Magnetic Field " << endl ;
 		cout << " 6. Cyclotron Frequency (Frequency of Circular Path due to Perpendicular Magnetic Field " << endl ;
+		cout << " 7. Pitch of Helical Path " << endl ;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -316,6 +317,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			t4circle_m(); 	// Time Period for Revolution due to Magnetic Field
 		else if(o == 6)
 			f4circle_m(); 	// Frequency of a Circular Motion due to Magnetic Field
+		else if(o == 7)
+			pitch_helical();
 		else
             cout << alert << " Invalid option please try again " << endl;
         

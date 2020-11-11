@@ -1449,7 +1449,28 @@ void f4circle_m() 	// Frequency of a Circular Motion due to Magnetic Field
 	cout << " Frequency = " << frequency << " s-1" << endl ;
 	
 }
+
+
+void pitch_helical() 	// Pitch On Helical Path
+
+{
+	float pitch , velocity , mass , charge , magnetic_field ;
+	double angle ;
 	
+	cout << " Enter the Mass : " ;
+	cin >> mass ;
+	cout << " Enter the Charge : " ;
+	cin >> charge ;
+	cout << " Enter the Magnetic Field (B) : " ;
+	cin >> magnetic_field ;
+	cout << " Enter the Angle b/w Magnetic Field & Velocity : " ;
+	cin >> angle ;
+	
+	pitch = velocity * cos(angle)  * (2*pi * mass) / (charge * magnetic_field) ;
+	
+	cout << " Pitch = " << pitch << " m" << endl ;
+	
+}
 	
 	
 	
