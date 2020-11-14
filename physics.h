@@ -1493,7 +1493,7 @@ void ke_ac_ion() 	// Kinetic Energy of Accelerated Ion
 	cout << " Kinetic Energy = " << kinetic_energy << " J" << endl ;
 	
 }
-}
+
 	
 	
 
