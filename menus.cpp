@@ -300,6 +300,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 5. Time Period of Circular Path due to Perpendicular Magnetic Field " << endl ;
 		cout << " 6. Cyclotron Frequency (Frequency of Circular Path due to Perpendicular Magnetic Field " << endl ;
 		cout << " 7. Pitch of Helical Path " << endl ;
+		cout << " 8. Kinetic Energy of Accelerated Ion " << endl ;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -318,7 +319,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		else if(o == 6)
 			f4circle_m(); 	// Frequency of a Circular Motion due to Magnetic Field
 		else if(o == 7)
-			pitch_helical();
+			pitch_helical(); 	// Pitch of Helix
+		else if(o == 8)
+			ke_ac_ion(); 	// Kinetic Energy of Accelerated Ions
 		else
             cout << alert << " Invalid option please try again " << endl;
         

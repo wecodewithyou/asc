@@ -1473,6 +1473,28 @@ void pitch_helical() 	// Pitch On Helical Path
 }
 	
 	
+void ke_ac_ion() 	// Kinetic Energy of Accelerated Ion
+
+{
+	float mass , velocity , charge , magnetic_field , radius , kinetic_energy ;
+	
+	cout << " Enter the Mass : " ;
+	cin >> mass ;
+	cout << " Enter the Radius : " ;
+	cin >> radius ;
+	cout << " Enter the Charge : " ;
+	cin >> charge ;
+	cout << " Enter the Magnetic Field (B) : " ;
+	cin >> magnetic_field ;
+	
+	velocity = (charge * magnetic_field * radius) / mass ;
+	kinetic_energy = (mass * velocity * velocity) / 2 ;
+
+	cout << " Kinetic Energy = " << kinetic_energy << " J" << endl ;
+	
+}
+}
+	
 	
 
 #endif
