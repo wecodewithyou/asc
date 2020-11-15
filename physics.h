@@ -1494,6 +1494,21 @@ void ke_ac_ion() 	// Kinetic Energy of Accelerated Ion
 	
 }
 
+
+void velocity_selector() 	// Find the Selecting Velocity
+
+{
+	float velocity , electric_field , magnetic_field ;
+	
+	cout << " Enter the Magnetic Field : " ;
+	cin >> magnetic_field ;
+	cout << " Enter the Electric Field : " ;
+	cin >> electric_field ;
+	
+	velocity = electric_field / magnetic_field ;
+	
+	cout << " The Velocity of Particles that undeviated = " << velocity << " m/s" << endl ;
+}
 	
 	
 

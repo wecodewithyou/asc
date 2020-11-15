@@ -301,6 +301,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 6. Cyclotron Frequency (Frequency of Circular Path due to Perpendicular Magnetic Field " << endl ;
 		cout << " 7. Pitch of Helical Path " << endl ;
 		cout << " 8. Kinetic Energy of Accelerated Ion " << endl ;
+		cout << " 9. Find the Selected Velocity of Particles in a Velocity Selector " << endl ;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -322,6 +323,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			pitch_helical(); 	// Pitch of Helix
 		else if(o == 8)
 			ke_ac_ion(); 	// Kinetic Energy of Accelerated Ions
+		else if(o == 9)
+			velocity_selector(); 	// Selected Velocity
 		else
             cout << alert << " Invalid option please try again " << endl;
         
