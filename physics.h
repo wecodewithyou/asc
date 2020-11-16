@@ -1510,6 +1510,22 @@ void velocity_selector() 	// Find the Selecting Velocity
 	cout << " The Velocity of Particles that undeviated = " << velocity << " m/s" << endl ;
 }
 	
+void velocity_light() 		// Velocity Of Light
+
+{
+	double nu , exlon ;
+	float velocity ;
+	
+	cout << " Enter the Permitivity : " ;
+	cin >> exlon ;
+	cout << " Enter the Permeability : " ;
+	cin >> nu ;
+	
+	velocity = 1 / (sqrt( nu * exlon)) ;
+	
+	cout << " Velocity = " << velocity << " m/s" << endl ;
+	
+}
 	
 
 #endif
