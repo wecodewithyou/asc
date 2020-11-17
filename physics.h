@@ -12,6 +12,7 @@ const double e = 1.6e-19; 	// e is the charge of Proton or electrons
 const double k = 9e9;  // coulomb's law constant [ k = 1/4*pi*e0 ]
 const double e0 = 8.854e-12; 	// Electric Permitivity in free space
 const double pi = 3.14;
+const double nu0 = 12.56e-7 ;
 
 						/*
 							// Chapter 1 \\
@@ -1526,6 +1527,23 @@ void velocity_light() 		// Velocity Of Light
 	cout << " Velocity = " << velocity << " m/s" << endl ;
 	
 }
+
+void m_circular_loop() 		// Magnetic Field on the axis of a circular current loop
+
+{
+	float current , radius , length , magnetic_field ;
 	
+	cout << " Enter the Current : " ;
+	cin >> current;
+	cout << " Enter the Radius of the circle : " ;
+	cin >> radius ;
+	cout << " Enter the distance of the point on the axis : " ;
+	cin >> length ;
+	
+	magnetic_field = nu0 * current * radius / 2* pow(( radius*radius + length*length ),1.5) ;
+	
+	cout << " Magnetic Field = " << magnetic_field << " T" << endl ;
+	
+}
 
 #endif

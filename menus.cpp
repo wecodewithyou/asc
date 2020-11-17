@@ -303,6 +303,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 8. Kinetic Energy of Accelerated Ion " << endl ;
 		cout << " 9. Find the Selected Velocity of Particles in a Velocity Selector " << endl ;
 		cout << " 10. Find Velocity of Light in a Medium " << endl ;
+		cout << " 11. Find the Magnetic Field on the axis of a circular current loop " << endl ;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -326,8 +327,10 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			ke_ac_ion(); 	// Kinetic Energy of Accelerated Ions
 		else if(o == 9)
 			velocity_selector(); 	// Selected Velocity
-		else if(o ==10)
+		else if(o == 10)
 			velocity_light(); 	// Velocity of Light in a Medium
+		else if(o == 11)
+			m_circular_loop(); 	// Magnetic Field on the axis of a circular current loop
 		else
             cout << alert << " Invalid option please try again " << endl;
         
