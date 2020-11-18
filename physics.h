@@ -1546,4 +1546,22 @@ void m_circular_loop() 		// Magnetic Field on the axis of a circular current loo
 	
 }
 
+void m_centre_circular_loop() 		// Magnetic Field at the centre of a circular current loop
+
+{
+	float current , radius , magnetic_field ;
+	
+	cout << " Enter the Current : " ;
+	cin >> current;
+	cout << " Enter the Radius of the circle : " ;
+	cin >> radius ;
+	
+	magnetic_field = nu0 * current / 2*radius ;
+	
+	cout << " Magnetic Field = " << magnetic_field << " T" << endl ;
+	
+}
+	
+	
+	
 #endif
