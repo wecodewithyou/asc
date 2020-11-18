@@ -333,7 +333,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		else if(o == 11)
 			m_circular_loop(); 	// Magnetic Field on the axis of a circular current loop
 		else if(o == 12)
-			m_centre_circular_loopircular_loop(); 	// Magnetic Field at the centre of a circular current loop
+			m_centre_circular_loop(); 	// Magnetic Field at the centre of a circular current loop
 		else
             cout << alert << " Invalid option please try again " << endl;
         
