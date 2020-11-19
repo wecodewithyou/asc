@@ -1561,7 +1561,29 @@ void m_centre_circular_loop() 		// Magnetic Field at the centre of a circular cu
 	cout << " Magnetic Field = " << magnetic_field << " T" << endl ;
 	
 }
+
+void m_force_parallel_current() 	// Magnetic Force b/w two Parallel Current Carrying Conductors
+
+{
+	float current1,current2 , length ,distance , magnetic_force ;
 	
+	cout << " Enter the 1st Current : " ;
+	cin >> current1 ;
+	cout << " Enter the 2nd Current : " ;
+	cin >> current2 ;
+	cout << " Enter Total Length of the Wire : " ;
+	cin >> length ;
+	cout << " Enter the Distance b/w Them : " ;
+	cin >> distance ;
+	
+	magnetic_force = nu0 * current1 * current2 * length / 2 * pi* distance ;
+	
+	cout << " Magnetic Force = " << magnetic_force << " N" << endl ;
+	
+}
+
+
+
 	
 	
 #endif

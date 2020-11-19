@@ -305,6 +305,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 10. Find Velocity of Light in a Medium " << endl ;
 		cout << " 11. Find the Magnetic Field on the axis of a circular current loop " << endl ;
 		cout << " 12. Find the Magnetic Field at the centre of a circular current loop " << endl ;
+		cout << " 13. Find the Magnetic Force b/w two Parallel Current Carrying Conductors " << endl;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -334,6 +335,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			m_circular_loop(); 	// Magnetic Field on the axis of a circular current loop
 		else if(o == 12)
 			m_centre_circular_loop(); 	// Magnetic Field at the centre of a circular current loop
+		else if(o == 13)
+			m_force_parallel_current();
 		else
             cout << alert << " Invalid option please try again " << endl;
         
