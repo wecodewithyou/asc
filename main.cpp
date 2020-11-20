@@ -38,7 +38,7 @@ void banner()
 
                 GITHUB:https://www.github.com/wecodewithyou
                 CONTACT INFO:wecodewithyou2020@protonmail.com
-                DEVS:Mr.Unkn0wn,Ph0en1x,Salman
+                DEVS:Mr.Unkn0wn,Ph0en1x,Salman,NasiOsx
                 WEBSITE:https://sancoders.sanbots.repl.co
 		)";
 	cout << "\n";
