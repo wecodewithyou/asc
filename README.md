@@ -1,5 +1,10 @@
 # Advanced Science Calculator (ASC)
 
-All in One Science subjects problem solver for +2 students , Physics , Chemistry and Computer Science problems solver
+Science subjects problem solver for +2 students .
 
-Project by _Mr.Unkn0wn_ , _ph0en1x_ , _Salman_ 
+# Supported Subjects
+* Chemistry
+* Physics
+* Computer Science
+
+Project by __Mr.Unkn0wn__ , __ph0en1x__ , __Salman__ , __Nasi Osx__
