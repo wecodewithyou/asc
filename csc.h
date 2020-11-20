@@ -1,5 +1,5 @@
-#ifndef __CSC_H_INCLUDED__
-#define __CSC_H_INCLUDED__
+#ifndef CSC_H // header guard
+#define CSC_H
 
 #include<iostream>
 #include <limits>

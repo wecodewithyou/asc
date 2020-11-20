@@ -1,5 +1,5 @@
-#ifndef __PHYSICS_HINCLUDED__ // header lock
-#define __PHYSICS_HINCLUDED__
+#ifndef PHYSICS_H // header guard
+#define PHYSICS_H
 
 #include<iostream>
 #include<cmath>

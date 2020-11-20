@@ -1,5 +1,5 @@
-#ifndef __CHEMISTRY_H_INCLUDED__
-#define __CHEMISTRY_H_INCLUDED__
+#ifndef CHEMISTRY_H // header guard
+#define CHEMISTRY_H
 
 #include <iostream>
 #include <cmath>
