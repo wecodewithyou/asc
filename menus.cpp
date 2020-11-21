@@ -306,6 +306,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 11. Find the Magnetic Field on the axis of a circular current loop " << endl ;
 		cout << " 12. Find the Magnetic Field at the centre of a circular current loop " << endl ;
 		cout << " 13. Find the Magnetic Force b/w two Parallel Current Carrying Conductors " << endl;
+		cout << " 14. Find the Magnetic Force On a Current Carrying Conductors " << endl;
 		cout << " 0. Back to chapter menu " << endl ;
 		cout << " Enter a Option : ";
         cin >> o;
@@ -336,7 +337,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		else if(o == 12)
 			m_centre_circular_loop(); 	// Magnetic Field at the centre of a circular current loop
 		else if(o == 13)
-			m_force_parallel_current();
+			m_force_parallel_current();	 // Magnetic Force b/w two Parallel Current Carrying Conductors
+		else if(o == 14)
+			m_force_current(); 	 // Magnetic Force on a current carrying conductor 
 		else
             cout << alert << " Invalid option please try again " << endl;
         

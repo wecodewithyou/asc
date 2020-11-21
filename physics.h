@@ -1583,6 +1583,28 @@ void m_force_parallel_current() 	// Magnetic Force b/w two Parallel Current Carr
 }
 
 
+void m_force_current()		 // Magnetic Force on a current carrying conductor 
+
+{
+	float magnetic_force , magnetic_field , current , length ;
+	double angle ;
+	
+	cout << " Enter the Current : " ;
+	cin >> current ;
+	cout << " Enter the Magnetic Field : " ;
+	cin >> magnetic_field ;
+	cout << " Enter the Length : " ;
+	cin >> length ;
+	cout << " Enter the Angle b/w Current and Magnetic Field : " ;
+	cin >> angle ;
+	
+	magnetic_force = current * length * magnetic_field * sin(angle) ;
+	
+	cout << " Magnetic Force = " << magnetic_force << " N" << endl ;
+	
+}
+
+
 
 	
 	
