@@ -307,7 +307,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 12. Find the Magnetic Field at the centre of a circular current loop " << endl ;
 		cout << " 13. Find the Magnetic Force b/w two Parallel Current Carrying Conductors " << endl;
 		cout << " 14. Find the Magnetic Force On a Current Carrying Conductors " << endl;
-		cout << " 0. Back to chapter menu " << endl ;
+		cout << " 15. Find the Magnetic Field Due to Infinitely Long Staight wire Carrying Current " << endl;
+		cout << " 0. Back to chapter menu " << endl ;		
 		cout << " Enter a Option : ";
         cin >> o;
         if(o == 0)
@@ -340,6 +341,8 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 			m_force_parallel_current();	 // Magnetic Force b/w two Parallel Current Carrying Conductors
 		else if(o == 14)
 			m_force_current(); 	 // Magnetic Force on a current carrying conductor 
+		else if(o == 15)
+			m_field_long(); 	// Magnetic Field Due to Infinitely long staight wire carrying current
 		else
             cout << alert << " Invalid option please try again " << endl;
         

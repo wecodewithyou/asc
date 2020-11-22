@@ -1604,7 +1604,20 @@ void m_force_current()		 // Magnetic Force on a current carrying conductor
 	
 }
 
+void m_field_long() 	// Magnetic Field Due to Infinitely long staight wire carrying current
 
+{
+	float magnetic_field , curent , radius ;
+
+	cout << " Enter the current : " ;
+	cin >> current ;
+	cout << " Enter the distance to the point : " ;
+	cin >> radius ;
+
+	magnetic_field = n0 * current / 2*pi * radius ;
+
+	cout << " Magnetic Field = " << magnetic_field << " T" << endl;
+}
 
 	
 	
