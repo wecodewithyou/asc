@@ -308,6 +308,7 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		cout << " 13. Find the Magnetic Force b/w two Parallel Current Carrying Conductors " << endl;
 		cout << " 14. Find the Magnetic Force On a Current Carrying Conductors " << endl;
 		cout << " 15. Find the Magnetic Field Due to Infinitely Long Staight wire Carrying Current " << endl;
+		cout << " 16. Find the Magnetic Field of a Long Solenoid/Toroid " << endl;
 		cout << " 0. Back to chapter menu " << endl ;		
 		cout << " Enter a Option : ";
         cin >> o;
@@ -342,7 +343,9 @@ void sub_menu::problems_menu::physics( int chapter) // Initializing function ins
 		else if(o == 14)
 			m_force_current(); 	 // Magnetic Force on a current carrying conductor 
 		else if(o == 15)
-			m_field_long(); 	// Magnetic Field Due to Infinitely long staight wire carrying current
+			m_field_long_wire(); 	// Magnetic Field Due to Infinitely long staight wire carrying current
+		else if(o == 16)
+			m_field_long_solenoid(); 	// Magnetic Field of a Long Solenoid/toroid
 		else
             cout << alert << " Invalid option please try again " << endl;
         
