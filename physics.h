@@ -1604,7 +1604,7 @@ void m_force_current()		 // Magnetic Force on a current carrying conductor
 	
 }
 
-void m_field_long() 	// Magnetic Field Due to Infinitely long staight wire carrying current
+void m_field_long_wire() 	// Magnetic Field Due to Infinitely long staight wire carrying current
 
 {
 	float magnetic_field , current , radius ;
@@ -1617,6 +1617,23 @@ void m_field_long() 	// Magnetic Field Due to Infinitely long staight wire carry
 	magnetic_field = nu0 * current / 2*pi * radius ;
 
 	cout << " Magnetic Field = " << magnetic_field << " T" << endl;
+}
+
+
+void m_field_long_solenoid() 	// Magnetic Field to a Long Solenoid
+
+{
+	float current , turns , magnetic_field ;
+	
+	cout << " Enter the Current : " ;
+	cin >> current ;
+	cout << " Enter the No.of Turns : " ;
+	cin >> turns ;
+	
+	magnetic_field = nu0 * turns * current ;
+	
+	cout << " Magnetic Field = " << magnetic_field << " T" << endl;
+	
 }
 
 	
