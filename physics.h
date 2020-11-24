@@ -1636,6 +1636,23 @@ void m_field_long_solenoid() 	// Magnetic Field to a Long Solenoid
 	
 }
 
+
+void current_electron() 	// Current of a revolving electron
+
+{
+	float current , velocity , radius;
+	
+	cout << " Enter the Velocity of Electron : " ;
+	cin >> velocity ;
+	cout << " Enter the Radius of circular orbit : " ;
+	cin >> radius ;
+	
+	current = e*velocity / 2*pi * radius ;
+	
+	cout << " Current = " << current << " A" << endl;
+	
+}
+	
 	
 	
 #endif
